@@ -1,12 +1,158 @@
 <template>
-  <nav class="bg-white shadow-sm px-6 py-4 flex items-center justify-between">
-    <RouterLink to="/" class="text-xl font-bold text-gray-800">dev lantern</RouterLink>
+  <nav class="bg-gray-100 px-6 md:px-10 py-4 flex items-center justify-between relative">
+    <!-- Logo -->
+    <div class="flex items-center">
+      <RouterLink to="/">
+        <img :src="logo" alt="Dev Lantern" class="h-10 w-auto" />
+      </RouterLink>
+    </div>
 
-    <ul class="flex gap-6 text-sm font-medium text-gray-600">
-      <li><RouterLink to="/"          active-class="text-blue-600" class="hover:text-blue-500">Home</RouterLink></li>
-      <li><RouterLink to="/about"     active-class="text-blue-600" class="hover:text-blue-500">About</RouterLink></li>
-      <li><RouterLink to="/community" active-class="text-blue-600" class="hover:text-blue-500">Community</RouterLink></li>
-      <li><RouterLink to="/contact"   active-class="text-blue-600" class="hover:text-blue-500">Contact</RouterLink></li>
+    <!-- Desktop Nav -->
+    <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-[#1a237e]">
+      <li>
+        <RouterLink to="/" class="hover:text-blue-700" active-class="font-semibold">Home</RouterLink>
+      </li>
+      <li>
+        <RouterLink to="/about" class="hover:text-blue-700" active-class="font-semibold">About</RouterLink>
+      </li>
+
+      <!-- Program Dropdown -->
+      <li class="relative" @mouseenter="isProgramOpen = true" @mouseleave="isProgramOpen = false">
+        <button class="flex items-center gap-1 hover:text-blue-700 font-semibold text-[#1a237e] focus:outline-none">
+          Program
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform duration-200" :class="{ 'rotate-180': isProgramOpen }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+
+        <transition name="dropdown">
+          <ul
+            v-if="isProgramOpen"
+            class="absolute top-full left-0 mt-2 w-44 bg-white shadow-lg rounded-md py-2 z-50 text-[#1a237e]"
+          >
+            <li>
+              <RouterLink
+                to="/programs/podcast"
+                class="block px-4 py-2 text-sm hover:bg-gray-50 hover:text-blue-700"
+                @click="isProgramOpen = false"
+              >Podcast</RouterLink>
+            </li>
+            <li>
+              <RouterLink
+                to="/programs/code-challenge"
+                class="block px-4 py-2 text-sm hover:bg-gray-50 hover:text-blue-700"
+                @click="isProgramOpen = false"
+              >Code Challenge</RouterLink>
+            </li>
+            <li>
+              <RouterLink
+                to="/programs/dev-matrix"
+                class="block px-4 py-2 text-sm hover:bg-gray-50 hover:text-blue-700"
+                @click="isProgramOpen = false"
+              >Dev Matrix</RouterLink>
+            </li>
+          </ul>
+        </transition>
+      </li>
+
+      <li>
+        <RouterLink to="/community" class="hover:text-blue-700" active-class="font-semibold">Community</RouterLink>
+      </li>
+      <li>
+        <RouterLink to="/contact" class="hover:text-blue-700" active-class="font-semibold">Contact</RouterLink>
+      </li>
     </ul>
+
+    <!-- CTA Button -->
+    <div class="hidden md:block">
+      <RouterLink
+        to="/programs"
+        class="bg-[#1a237e] text-white text-sm font-medium px-5 py-2.5 rounded-md hover:bg-[#283593] transition-colors duration-200"
+      >
+        Explore our programs
+      </RouterLink>
+    </div>
+
+    <!-- Mobile Hamburger -->
+    <button
+      class="md:hidden text-[#1a237e] focus:outline-none"
+      @click="isMenuOpen = !isMenuOpen"
+      aria-label="Toggle navigation"
+    >
+      <svg v-if="!isMenuOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      <svg v-else xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+
+    <!-- Mobile Menu -->
+    <transition name="fade">
+      <div
+        v-if="isMenuOpen"
+        class="md:hidden absolute top-full left-0 right-0 bg-white shadow-md z-50 px-6 py-4 space-y-3 text-sm font-medium text-[#1a237e]"
+      >
+        <RouterLink to="/" class="block py-1 hover:text-blue-700" @click="isMenuOpen = false">Home</RouterLink>
+        <RouterLink to="/about" class="block py-1 hover:text-blue-700" @click="isMenuOpen = false">About</RouterLink>
+
+        <!-- Mobile Program submenu -->
+        <div>
+          <button
+            class="flex items-center gap-1 py-1 w-full hover:text-blue-700 font-semibold"
+            @click="isMobileProgramOpen = !isMobileProgramOpen"
+          >
+            Program
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform duration-200" :class="{ 'rotate-180': isMobileProgramOpen }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <transition name="fade">
+            <div v-if="isMobileProgramOpen" class="pl-4 mt-1 space-y-2 text-sm">
+              <RouterLink to="/programs/podcast" class="block py-1 hover:text-blue-700" @click="isMenuOpen = false">Podcast</RouterLink>
+              <RouterLink to="/programs/code-challenge" class="block py-1 hover:text-blue-700" @click="isMenuOpen = false">Code Challenge</RouterLink>
+              <RouterLink to="/programs/dev-matrix" class="block py-1 hover:text-blue-700" @click="isMenuOpen = false">Dev Matrix</RouterLink>
+            </div>
+          </transition>
+        </div>
+
+        <RouterLink to="/community" class="block py-1 hover:text-blue-700" @click="isMenuOpen = false">Community</RouterLink>
+        <RouterLink to="/contact" class="block py-1 hover:text-blue-700" @click="isMenuOpen = false">Contact</RouterLink>
+
+        <RouterLink
+          to="/programs"
+          class="block mt-2 bg-[#1a237e] text-white text-center px-4 py-2.5 rounded-md hover:bg-[#283593] transition-colors"
+          @click="isMenuOpen = false"
+        >
+          Explore our programs
+        </RouterLink>
+      </div>
+    </transition>
   </nav>
 </template>
+
+<script setup>
+import { ref } from 'vue'
+import logo from '../assets/logo.png'
+
+const isMenuOpen = ref(false)
+const isProgramOpen = ref(false)
+const isMobileProgramOpen = ref(false)
+</script>
+
+<style scoped>
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
+}
+
+.dropdown-enter-active, .dropdown-leave-active {
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+.dropdown-enter-from, .dropdown-leave-to {
+  opacity: 0;
+  transform: translateY(-4px);
+}
+</style>
