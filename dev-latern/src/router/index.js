@@ -12,11 +12,11 @@ import devPodcast from '../pages/devPodcast.vue'
 const routes = [
   { path: '/',          component: HomePage },
   { path: '/about',     component: AboutPage },
-  { path: '/code-challenge', component: codeChallenge },
+  { path: '/programs/code-challenge', component: codeChallenge },
   { path: '/community', component: communityPage },
   { path: '/contact', component: contactPage },
   { path: '/dev-matrix', component: devMatrix },
-  { path: '/dev-podcast', component: devPodcast },
+  { path: '/programs/podcast', component: devPodcast },
 
 
 ]
