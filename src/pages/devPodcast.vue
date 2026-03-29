@@ -174,9 +174,9 @@
           Have some big idea or brand to develop and need help?<br class="hidden sm:block" />
           Then reach out we'd love to hear about your project and provide help.
         </p>
-        <button class="px-10 py-3.5 bg-[#243E90] text-white text-sm font-semibold rounded-lg hover:bg-[#152568] transition-colors">
+        <a href="/contact" class="px-10 py-3.5 bg-[#243E90] text-white text-sm font-semibold rounded-lg hover:bg-[#152568] transition-colors">
           Contact Us Now
-        </button>
+        </a>
       </div>
       <div class="absolute bottom-4 right-6 sm:right-10">
         <img

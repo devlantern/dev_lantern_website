@@ -18,10 +18,10 @@
         </h1>
 
         <div class="flex flex-wrap gap-4 justify-center mt-8">
-          <a href="#" class="px-8 py-3 rounded-xl border-2 border-white text-[#0a1a4e] text-lg bg-white font-semibold hover:bg-transparent hover:text-white transition-all duration-200">
+          <a href="./community" target="blank" class="px-8 py-3 rounded-xl border-2 border-white text-[#0a1a4e] text-lg bg-white font-semibold hover:bg-transparent hover:text-white transition-all duration-200">
             Join Our Community
           </a>
-          <a href="#" class="px-5 py-3 rounded-xl text-lg bg-transparent border text-white font-semibold hover:bg-blue-700 transition-all duration-200 flex items-center gap-2">
+          <a href="./programs/podcast" target="blank" class="px-5 py-3 rounded-xl text-lg bg-transparent border text-white font-semibold hover:bg-blue-700 transition-all duration-200 flex items-center gap-2">
             Our Podcast 
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M7 17L17 7M17 7H7M17 7V17" stroke="#E9ECF4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -85,7 +85,6 @@
             </div>
           </div>
 
-          <!-- Growth -->
           <div class="rounded-2xl overflow-hidden border border-gray-100 p-4 shadow-sm">
             <img src="../assets/growth-join.png" alt="">
             <div class="p-3 md:p-6 text-[#4B61A4]">
@@ -96,7 +95,6 @@
             </div>
           </div>
 
-          <!-- Learn -->
           <div class="rounded-2xl overflow-hidden shadow-sm  p-4 bg-[#243E90]">
             <img src="../assets/learn-join.png" alt="">
             <div class="p-3 md:p-6 text-[#A1ACCF]">
@@ -129,9 +127,9 @@
               <h3 class="text-2xl font-medium mb-4">{{ program.title }}</h3>
               <p class=" text-lg">{{ program.description }}</p>
             </div>
-            <a href="#" class="relative z-20 mt-6 flex items-center gap-1 text-lg font-medium  transition-colors" :class="[program.textColor]">
-              See More <span>→</span>
-            </a>
+            <RouterLink :to="program.link" class="relative z-20 mt-6 flex items-center gap-1 text-lg font-medium transition-colors" :class="[program.textColor]">
+  See More <span>→</span>
+</RouterLink>
           </div>
         </div>
       </div>
@@ -142,7 +140,7 @@
         class="absolute inset-0 bg-cover bg-center z-50"
         style="background-image: url('/bg-2.png')"
       ></div>
-      
+
       <div class="absolute top-0 right-0">
       <img
         src="../assets/Vector 3.png"
@@ -213,18 +211,21 @@ const programs = [
     description: 'In 2024, we launched the Dev Lantern Podcast to create meaningful experience-driven conversations within the tech ecosystem. This is a platform to spotlight African tech builders and innovators quickly became a channel for practical insight, career clarity, and industry exposure.',
     overlay: 'rgba(36, 62, 144, 1)',   
     textColor: 'text-[#CAD1E4]',
+    link: './programs/podcast'
   },
   {
     title: 'Dev Matrix',
     description: 'In April 2025, we introduced Dev Matrix, our free, structured tech bootcamp designed to close the gap between learning and real-world application. The first cohort focused on Mobile Development, and in continuity is Frontend/Backend and Product Design / Management.',
     overlay: 'rgba(233, 236, 244, 1)', 
     textColor: 'text-[#4B61A4]', 
+    link: './dev-matrix'
   },
   {
     title: 'Code Challenge',
     description: 'In August, we launched the Dev Lantern Code Challenge to push learning beyond theory and into execution. Designed as a hands-on, problem-solving initiative, the Code Challenge encourages collaboration, strengthens technical competence, and identifies emerging talent within the community.',
     overlay: 'rgba(20, 40, 110, 1)',
-    textColor: 'text-[#CAD1E4]',   
+    textColor: 'text-[#CAD1E4]', 
+    link: './programs/code-challenge'  
   },
 ]
 
