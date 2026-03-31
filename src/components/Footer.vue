@@ -64,25 +64,25 @@
 
           <!-- Social Icons -->
           <div class="flex gap-3">
-            <a href="#" aria-label="LinkedIn"
+          <a href="https://linktr.ee/lanterndevs" target="_blank" aria-label="Linktree"
+            class="h-9 w-9 rounded-full border border-[#c5cae9] bg-[#eef0f8] flex items-center justify-center text-[#3949ab] hover:bg-[#c5cae9] transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M7.953 15.066c-.08.163-.08.324-.08.486.08.517.528.897 1.052.897h1.294v4.629c0 .16 0 .324.08.486.16.484.636.814 1.134.814h2.347c.498 0 .975-.33 1.134-.814.08-.162.08-.325.08-.486v-4.63h1.294c.524 0 .972-.38 1.052-.896 0-.162 0-.323-.08-.486l-4.214-7.897-4.093 7.897zm4.093-12.04L7.2 10.61c-.08.162-.08.324-.08.486 0 .57.447 1.05 1.012 1.05h1.134v.001h1.58v-2.43h2.347v2.43h1.58v-.001h1.134c.565 0 1.012-.48 1.012-1.05 0-.162-.08-.324-.08-.486l-4.793-7.584z"/>
+            </svg>
+          </a>
+            <a href="https://www.instagram.com/dev_lantern" target="_blank" aria-label="Instagram"
               class="h-9 w-9 rounded-full border border-[#c5cae9] bg-[#eef0f8] flex items-center justify-center text-[#3949ab] hover:bg-[#c5cae9] transition-colors">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S.02 4.88.02 3.5 1.13 1 2.5 1s2.48 1.12 2.48 2.5zM.02 8h4.96v14H.02V8zm7.94 0h4.76v1.91h.07c.66-1.25 2.28-2.57 4.69-2.57 5.02 0 5.95 3.3 5.95 7.59V22h-4.96v-6.26c0-1.49-.03-3.41-2.08-3.41-2.08 0-2.4 1.63-2.4 3.31V22H7.96V8z"/>
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
               </svg>
-            </a>
-            <a href="#" aria-label="Facebook"
-              class="h-9 w-9 rounded-full border border-[#c5cae9] bg-[#eef0f8] flex items-center justify-center text-[#3949ab] hover:bg-[#c5cae9] transition-colors">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/>
-              </svg>
-            </a>
-            <a href="#" aria-label="X"
+           </a>
+            <a href="https://x.com/dev_lantern" target="_blank" aria-label="X"
               class="h-9 w-9 rounded-full border border-[#c5cae9] bg-[#eef0f8] flex items-center justify-center text-[#3949ab] hover:bg-[#c5cae9] transition-colors">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
               </svg>
             </a>
-            <a href="#" aria-label="YouTube"
+            <a href="http://youtu.be/mKwOF8AFMP4" target="_blank" aria-label="YouTube"
               class="h-9 w-9 rounded-full border border-[#c5cae9] bg-[#eef0f8] flex items-center justify-center text-[#3949ab] hover:bg-[#c5cae9] transition-colors">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
