@@ -44,13 +44,9 @@
               :key="cat.id"
               @click="activeCategory = cat.id"
               :class="[
-                'flex items-center gap-2 px-4 py-2 rounded-sm text-xs sm:text-sm font-medium transition-all duration-200',
-                activeCategory === cat.id
-                  ? 'bg-[#1a2f7a]  text-white shadow-md scale-[1.02]'
-                  : 'bg-[#E9ECF4]  text-[#1a2f7a] hover:bg-[#eef2fb] hover:shadow-sm hover:scale-[1.01]'
+                'flex items-center gap-2 px-4 py-2 rounded-sm text-xs sm:text-sm font-medium transition-all duration-200 border text-[#1a2f7a] border-[#E9ECF4]',
               ]"
             >
-              <!-- Icon -->
               <span class="flex-shrink-0" v-html="cat.icon"></span>
               {{ cat.label }}
             </button>
@@ -59,36 +55,51 @@
           <!-- Video thumbnail -->
           <div class="relative rounded-2xl overflow-hidden bg-gray-700 w-full" style="aspect-ratio: 16/9;">
 
-            <img
-              v-if="podcastThumbnail"
-              :src="podcastThumbnail"
-              alt="Podcast video thumbnail"
-              class="absolute inset-0 w-full h-full object-cover block"
-            />
+            <!-- YouTube iframe (shown after play is clicked) -->
+            <iframe
+              v-if="isPlaying"
+              :src="`https://www.youtube.com/embed/${youtubeVideoId}?autoplay=1`"
+              class="absolute inset-0 w-full h-full"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
 
-            <!-- Timestamp badge -->
-            <div class="absolute top-3 left-3 flex items-center gap-1.5 bg-black/50 text-white text-xs font-medium px-2.5 py-1 rounded-md">
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg>
-              2:00
-            </div>
-
-            <!-- Play button -->
-            <div class="absolute inset-0 flex items-center justify-center">
-              <button class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/90 flex items-center justify-center shadow-lg hover:scale-110 hover:bg-white transition-all duration-200">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="#1a2f7a"><polygon points="6,3 20,12 6,21"/></svg>
-              </button>
-            </div>
-
-            <!-- Dev Lantern watermark  -->
-            <div class="absolute bottom-3 right-3 flex items-center gap-1.5 opacity-90">
+            <!-- Thumbnail -->
+            <template v-else>
               <img
-                v-if="logoImage"
-                :src="logoImage"
-                alt="Dev Lantern"
-                class="h-7 object-contain"
+                v-if="podcastThumbnail"
+                :src="podcastThumbnail"
+                alt="Podcast video thumbnail"
+                class="absolute inset-0 w-full h-full object-cover block"
               />
-              <span v-else class="text-white text-[10px] font-bold tracking-widest uppercase">Dev Lantern</span>
-            </div>
+
+              <!-- Timestamp badge -->
+              <div class="absolute top-3 left-3 flex items-center gap-1.5 bg-black/50 text-white text-xs font-medium px-2.5 py-1 rounded-md">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg>
+                2:00
+              </div>
+
+              <!-- Play button -->
+              <div class="absolute inset-0 flex items-center justify-center">
+                <button
+                  @click="isPlaying = true"
+                  class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/90 flex items-center justify-center shadow-lg hover:scale-110 hover:bg-white transition-all duration-200"
+                >
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="#1a2f7a"><polygon points="6,3 20,12 6,21"/></svg>
+                </button>
+              </div>
+
+              <div class="absolute bottom-3 right-3 flex items-center gap-1.5 opacity-90">
+                <img
+                  v-if="logoImage"
+                  :src="logoImage"
+                  alt="Dev Lantern"
+                  class="h-7 object-contain"
+                />
+                <span v-else class="text-white text-[10px] font-bold tracking-widest uppercase">Dev Lantern</span>
+              </div>
+            </template>
 
           </div>
 
@@ -129,7 +140,7 @@
       </div>
     </div>
 
-    <!-- Row 2: Legacy | Image -->
+    <!-- Row 2 -->
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-3">
       <div class="bg-white sm:min-h-[269px] rounded-2xl p-8 flex flex-col justify-center">
         <h3 class="text-2xl font-bold text-[#1a2f7a] mb-3">Legacy</h3>
@@ -142,7 +153,7 @@
       </div>
     </div>
 
-    <!-- Row 3: Image | Connection | Exposure -->
+    <!-- Row 3 -->
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
       <div class="rounded-2xl sm:min-h-[286px] overflow-hidden bg-gray-600">
         <img v-if="guestImage3" :src="guestImage3" alt="Guest image 3" class="w-full h-full object-cover hidden sm:block" />
@@ -168,7 +179,7 @@
 
 
     <!-- CTA -->
-    <section class="relative bg-[#eef2f8]  w-full h-full py-16 sm:py-20 overflow-hidden">
+    <section class="relative bg-[#eef2f8] w-full h-full py-16 sm:py-20 overflow-hidden">
       <div class="max-w-6xl mx-auto px-6 text-center">
         <p class="text-base sm:text-2xl text-gray-700 leading-[1.9] mb-8">
           Have some big idea or brand to develop and need help?<br class="hidden sm:block" />
@@ -178,18 +189,16 @@
           Contact Us Now
         </a>
       </div>
-      <div class="absolute bottom-4 right-6 sm:right-10">
-        <img
-          v-if="squiggleImage"
-          :src="squiggleImage"
-          alt=""
-          aria-hidden="true"
-          class="w-[80px] sm:w-[110px] h-auto object-contain"
-        />
-        <svg v-else width="110" height="60" viewBox="0 0 110 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M4 48 Q20 10 38 34 Q56 58 74 26 Q90 4 106 30" stroke="#c9a227" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-        </svg>
-      </div>
+
+      <!-- Squiggle -->
+      <<div class="absolute top-50 right-[-200px] z-10">
+    <img
+      src="../assets/Vector 3.png"
+      alt=""
+      aria-hidden="true"
+      class="lg:h-full"
+    />
+  </div>
     </section>
 
   </div>
@@ -200,14 +209,16 @@ export default {
   name: "DevPodcast",
   data() {
     return {
-    
+
+      isPlaying: false,
+      youtubeVideoId: "OCeLC0URkZ0",
+
       activeCategory: 1,
-      
+
       categories: [
         {
           id: 1,
           label: "Trends and Updates",
-          
           icon: `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                    <path d="M4.93 4.93a10 10 0 0 0 0 14.14"/>
                    <path d="M7.76 7.76a6 6 0 0 0 0 8.49"/>
@@ -219,7 +230,6 @@ export default {
         {
           id: 2,
           label: "Emerging Technology and Innovation",
-          
           icon: `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                    <rect x="2" y="3" width="20" height="14" rx="2"/>
                    <path d="M8 21h8M12 17v4"/>
@@ -228,7 +238,6 @@ export default {
         {
           id: 3,
           label: "Tech History and Lifestyle",
-          
           icon: `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
                    <path d="M2 17l10 5 10-5"/>
@@ -238,7 +247,6 @@ export default {
         {
           id: 4,
           label: "Startup and Entrepreneurship",
-         
           icon: `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
                    <circle cx="9" cy="7" r="4"/>
@@ -249,7 +257,6 @@ export default {
         {
           id: 5,
           label: "Venture Capital and Startup Ecosystem",
-        
           icon: `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                    <circle cx="12" cy="5" r="2"/>
                    <circle cx="5" cy="19" r="2"/>
@@ -260,7 +267,6 @@ export default {
         {
           id: 6,
           label: "Sustainability and Green Technology",
-        
           icon: `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                    <path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12z"/>
                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z"/>
@@ -269,7 +275,6 @@ export default {
         },
       ],
 
-      
       heroImage:        "/bg-3 1.png",
       podcastThumbnail: "/podcast.png",
       logoImage:        "/dev-logo.png",
@@ -277,7 +282,6 @@ export default {
       guestImage1:      "/guest1.png",
       guestImage2:      "/guest2.png",
       guestImage3:      "/guest3.png",
-      squiggleImage:    "/vector.png",
     };
   },
 };
