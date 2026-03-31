@@ -100,7 +100,7 @@
       <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-8">
         <h2 class="text-2xl sm:text-3xl font-bold text-white mb-8">Application Process</h2>
 
-        <!-- Three step tabs -->
+        <!-- Three step tabs
         <div class="grid grid-cols-3 gap-3 mb-4">
           <button
             v-for="step in appSteps"
@@ -115,7 +115,7 @@
           >
             {{ step.label }}
           </button>
-        </div>
+        </div> -->
 
         <!-- Step cards -->
         <div class="grid grid-row-3 sm:grid-cols-3 gap-3 mb-6">
@@ -137,7 +137,7 @@
           </div>
         </div>
 
-        <!-- Eligibility + image block -->
+        <!-- Eligibility -->
         <div class="relative rounded-2xl overflow-hidden sm:min-h-[501px]">
           <!-- Photo -->
           <img
@@ -169,22 +169,26 @@
           </div>
         </div>
 
-        <!-- Squiggle decoration — bottom right of section -->
+        <!-- Squiggle -->
         <div class="flex justify-end mt-6 pr-2">
           <img
             v-if="squiggleImage"
             :src="squiggleImage"
             alt=""
             aria-hidden="true"
-            class="w-[90px] sm:w-[120px] h-auto object-contain"
+            class="w-[90px] sm:w-[120px] h-auto object-contain block"
           />
-          <svg v-else width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M4 48 Q22 8 42 34 Q62 58 80 24 Q96 4 116 30"
-              stroke="#c9a227" stroke-width="6"
-              stroke-linecap="round" stroke-linejoin="round"
-              fill="none"/>
-          </svg>
         </div>
+         <!-- CTA Button -->
+    <div class="mt-10 flex justify-center ">
+       <
+      <RouterLink
+        to="/"
+        class="bg-[#243E90] text-white text-sm sm:text-lg font-medium px-10 sm:px-60 py-2.5 rounded-md hover:bg-[#283593] transition-colors duration-200"
+      >
+        Apply Now
+      </RouterLink>
+    </div>
 
       </div>
     </section>
@@ -208,7 +212,7 @@ export default {
         { id: 5, label: "Product Management" },
       ],
 
-      // Map track id → image path (replace with your actual asset imports)
+      // Map track id 
       trackImages: {
         1: "/track1.png",
         2: "",
@@ -217,11 +221,11 @@ export default {
         5: "",
       },
 
-      appSteps: [
-        { id: 1, label: "Dev Lantern" },
-        { id: 2, label: "Dev Matrix" },
-        { id: 3, label: "Code Challenge" },
-      ],
+      // appSteps: [
+      //   { id: 1, label: "Dev Lantern" },
+      //   { id: 2, label: "Dev Matrix" },
+      //   { id: 3, label: "Code Challenge" },
+      // ],
 
       stepCards: [
         {
@@ -255,11 +259,11 @@ export default {
         "Applicants must have basic understanding of any programming language.",
         "Applicants must be able to communicate fluently in English Language.",
         "Applicants must not have gone through this program prior.",
-        "Applicants must not have gone through this program prior.",
+        // "Applicants must not have gone through this program prior.",
         "Applicants must pass the assessment.",
       ],
 
-      // Asset paths — replace with actual imports in production
+      // Asset paths 
       heroImage:        "/bg-3 1.png",
       appSectionBg:     "/bg-3 1.png",
       eligibilityImage: "/application.png",

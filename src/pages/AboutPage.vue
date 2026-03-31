@@ -106,14 +106,13 @@
 
       <div class="relative z-10 max-w-6xl  mx-auto px-4 sm:px-6">
 
-        <!-- Gold squiggle -->
-        <img
-          v-if="squiggleImage"
-          :src="squiggleImage"
-          alt=""
-          aria-hidden="true"
-          class="absolute top-[-30px] right-4 z-10 w-[80px] sm:w-[250px] h-auto object-contain"
-        />
+        <!--squiggle -->
+       <img
+      src="../assets/Vector 3.png"
+      alt=""
+      aria-hidden="true"
+      class="absolute sm:top-[-50px] right-4 z-10 w-[80px]  sm:w-[300px] h-auto object-contain"
+    />
 
         <h2 class="text-xl sm:text-2xl font-bold text-gray-900 mb-5">Key Members</h2>
 
@@ -286,7 +285,7 @@ export default {
   data() {
     return {
       heroImage:       "/bg-3 1.png",
-      squiggleImage:   "/Vector.png",
+      squiggleImage:   "/vector.png",
       keyMembersBg:    "/bg2.png",
 
       valueImage1:     "/value1.png",
