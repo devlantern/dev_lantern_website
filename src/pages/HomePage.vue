@@ -31,28 +31,54 @@
         </div>
       </div>
 
-      <div class="relative z-10 flex flex-col md:flex-row gap-4 mt-20 w-full">
-        <div class="flex-1 h-[220px] rounded-2xl overflow-hidden shadow-lg">
+    <div class="relative z-10 mt-20 w-full overflow-hidden">
+      <div class="carousel-track flex gap-4">
+        <!-- images -->
+        <div class="min-w-[320px] h-[220px] rounded-2xl overflow-hidden shadow-lg flex-shrink-0">
           <img src="../assets/header1.png" alt="Community event 1" class="w-full h-full object-cover" />
         </div>
-        <div class="flex-1 h-[220px] rounded-2xl overflow-hidden shadow-lg">
+        <div class="min-w-[320px] h-[220px] rounded-2xl overflow-hidden shadow-lg flex-shrink-0">
           <img src="../assets/header2.png" alt="Community event 2" class="w-full h-full object-cover" />
         </div>
-        <div class="flex-1 h-[220px] rounded-2xl overflow-hidden shadow-lg">
+        <div class="min-w-[320px] h-[220px] rounded-2xl overflow-hidden shadow-lg flex-shrink-0">
           <img src="../assets/header3.png" alt="Community event 3" class="w-full h-full object-cover" />
         </div>
+        <div class="min-w-[320px] h-[220px] rounded-2xl overflow-hidden shadow-lg flex-shrink-0">
+          <img src="../assets/header4.png" alt="Community event 4" class="w-full h-full object-cover" />
+        </div>
+        <div class="min-w-[320px] h-[220px] rounded-2xl overflow-hidden shadow-lg flex-shrink-0">
+          <img src="../assets/header5.png" alt="Community event 5" class="w-full h-full object-cover" />
+        </div>
+
+        <!-- Duplicate set for seamless loop -->
+        <div class="min-w-[320px] h-[220px] rounded-2xl overflow-hidden shadow-lg flex-shrink-0">
+          <img src="../assets/header1.png" alt="Community event 1" class="w-full h-full object-cover" />
+        </div>
+        <div class="min-w-[320px] h-[220px] rounded-2xl overflow-hidden shadow-lg flex-shrink-0">
+          <img src="../assets/header2.png" alt="Community event 2" class="w-full h-full object-cover" />
+        </div>
+        <div class="min-w-[320px] h-[220px] rounded-2xl overflow-hidden shadow-lg flex-shrink-0">
+          <img src="../assets/header3.png" alt="Community event 3" class="w-full h-full object-cover" />
+        </div>
+        <div class="min-w-[320px] h-[220px] rounded-2xl overflow-hidden shadow-lg flex-shrink-0">
+          <img src="../assets/header4.png" alt="Community event 4" class="w-full h-full object-cover" />
+        </div>
+        <div class="min-w-[320px] h-[220px] rounded-2xl overflow-hidden shadow-lg flex-shrink-0">
+          <img src="../assets/header5.png" alt="Community event 5" class="w-full h-full object-cover" />
+        </div>
       </div>
+    </div>
     </section>
   
 
     <section class="bg-[#E9ECF4] py-10 px-6">
       <p class="text-center text-base text-[#667085] uppercase tracking-widest mb-6 font-medium">Our Partners</p>
       <div class="flex flex-wrap items-center justify-center gap-10 max-w-4xl mx-auto">
-        <img src="../assets/Smart-Learn-logo.png" alt="Smart Learn" >
-        <img src="../assets/hub.png" alt="hub" >
-        <img src="../assets/walure-logo.png" alt="Walure" >
+         <img src="../assets/hub.png" alt="hub" >
+         <img src="../assets/walure-logo.png" alt="Walure" >
         <img src="../assets/cardify.png" alt="Cardify" >
         <img src="../assets/axiom.png" alt="axiom" >
+        <img src="../assets/Smart-Learn-logo.png" alt="Smart Learn" >
       </div>
     </section>
 
@@ -235,3 +261,15 @@ const cohorts = [
   'Cohort 3: Product Design & Product Management',
 ]
 </script>
+
+
+<style scoped>
+.carousel-track {
+  animation: scroll-left 20s linear infinite;
+}
+
+@keyframes scroll-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+</style>
