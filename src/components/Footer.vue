@@ -47,8 +47,8 @@
           <ul class="space-y-2.5 text-sm text-[#3949ab]">
             <li><RouterLink to="/"  class="hover:text-[#1a237e]">Home</RouterLink></li>
             <!-- <li><RouterLink to="/dev-matrix" class="hover:text-[#1a237e]">Programs</RouterLink></li> -->
-            <li><RouterLink to="/community" class="hover:text-[#1a237e]">Community</RouterLink></li>
             <li><RouterLink to="/about" class="hover:text-[#1a237e]">About</RouterLink></li>
+            <li><RouterLink to="/community" class="hover:text-[#1a237e]">Community</RouterLink></li>
             <li><RouterLink to="/contact" class="hover:text-[#1a237e]">Contact</RouterLink></li>
           </ul>
         </div>
@@ -58,7 +58,7 @@
           <h3 class="text-[#1a237e] font-semibold mb-4">Our Programs</h3>
           <ul class="space-y-2.5 text-sm text-[#3949ab] mb-6">
             <li><RouterLink to="/dev-matrix" target="blank" class="hover:text-[#1a237e]">Dev Matrix</RouterLink></li>
-            <li><RouterLink to="/programs/podcast" target="blank" class="hover:text-[#1a237e]">Dev Lantern Podcast</RouterLink></li>
+            <li><RouterLink to="/programs/podcast" target="blank" class="hover:text-[#1a237e]">Dev Podcast</RouterLink></li>
             <li><RouterLink to="/programs/code-challenge" target="blank" class="hover:text-[#1a237e]">Code Challenge</RouterLink></li>
           </ul>
 
