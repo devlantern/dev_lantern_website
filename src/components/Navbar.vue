@@ -27,15 +27,22 @@
 
         <transition name="dropdown">
           <ul
-            v-if="isProgramOpen"
-            class="absolute top-full left-0 mt-2 w-44 bg-white shadow-lg rounded-md py-2 z-50 text-[#1a237e]"
+          v-if="isProgramOpen"
+          class="absolute top-full left-0 mt-2 w-44 bg-white shadow-lg rounded-md py-2 z-50 text-[#1a237e]"
           >
+          <li>
+            <RouterLink
+            to="/dev-matrix"
+            class="block px-4 py-2 text-sm hover:bg-gray-50 hover:text-blue-700"
+            @click="isProgramOpen = false"
+            >Dev Matrix</RouterLink>
+          </li>
             <li>
               <RouterLink
                 to="/programs/podcast"
                 class="block px-4 py-2 text-sm hover:bg-gray-50 hover:text-blue-700"
                 @click="isProgramOpen = false"
-              >Podcast</RouterLink>
+              >Dev Podcast</RouterLink>
             </li>
             <li>
               <RouterLink
@@ -43,13 +50,6 @@
                 class="block px-4 py-2 text-sm hover:bg-gray-50 hover:text-blue-700"
                 @click="isProgramOpen = false"
               >Code Challenge</RouterLink>
-            </li>
-            <li>
-              <RouterLink
-                to="/dev-matrix"
-                class="block px-4 py-2 text-sm hover:bg-gray-50 hover:text-blue-700"
-                @click="isProgramOpen = false"
-              >Dev Matrix</RouterLink>
             </li>
           </ul>
         </transition>
@@ -109,9 +109,9 @@
           </button>
           <transition name="fade">
             <div v-if="isMobileProgramOpen" class="pl-4 mt-1 space-y-2 text-sm">
-              <RouterLink to="/programs/podcast" class="block py-1 hover:text-blue-700" @click="isMenuOpen = false">Podcast</RouterLink>
-              <RouterLink to="/programs/code-challenge" class="block py-1 hover:text-blue-700" @click="isMenuOpen = false">Code Challenge</RouterLink>
               <RouterLink to="/dev-matrix" class="block py-1 hover:text-blue-700" @click="isMenuOpen = false">Dev Matrix</RouterLink>
+              <RouterLink to="/programs/podcast" class="block py-1 hover:text-blue-700" @click="isMenuOpen = false"> Dev Podcast</RouterLink>
+              <RouterLink to="/programs/code-challenge" class="block py-1 hover:text-blue-700" @click="isMenuOpen = false">Code Challenge</RouterLink>
             </div>
           </transition>
         </div>
@@ -120,11 +120,11 @@
         <RouterLink to="/contact" class="block py-1 hover:text-blue-700" @click="isMenuOpen = false">Contact</RouterLink>
 
         <RouterLink
-          to="/programs"
+          to="/dev-matrix"
           class="block mt-2 bg-[#1a237e] text-white text-center px-4 py-2.5 rounded-md hover:bg-[#283593] transition-colors"
           @click="isMenuOpen = false"
         >
-          Explore our programs
+          Apply Now
         </RouterLink>
       </div>
     </transition>
