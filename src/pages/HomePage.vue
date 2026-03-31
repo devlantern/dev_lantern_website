@@ -18,10 +18,10 @@
         </h1>
 
         <div class="flex flex-wrap gap-4 justify-center mt-8">
-          <a href="#" class="px-8 py-3 rounded-xl border-2 border-white text-[#0a1a4e] text-lg bg-white font-semibold hover:bg-transparent hover:text-white transition-all duration-200">
+          <a href="./community" target="blank" class="px-8 py-3 rounded-xl border-2 border-white text-[#0a1a4e] text-lg bg-white font-semibold hover:bg-transparent hover:text-white transition-all duration-200">
             Join Our Community
           </a>
-          <a href="#" class="px-5 py-3 rounded-xl text-lg bg-transparent border text-white font-semibold hover:bg-blue-700 transition-all duration-200 flex items-center gap-2">
+          <a href="./programs/podcast" target="blank" class="px-5 py-3 rounded-xl text-lg bg-transparent border text-white font-semibold hover:bg-blue-700 transition-all duration-200 flex items-center gap-2">
             Our Podcast 
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M7 17L17 7M17 7H7M17 7V17" stroke="#E9ECF4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -66,9 +66,9 @@
           <!-- Network -->
           <div class="rounded-2xl overflow-hidden bg-[#272727] border p-4 border-gray-100 shadow-sm">
             <img src="../assets/network-join.png" alt="">
-            <div class="p-6 text-white ">
-              <h3 class="text-3xl font-medium mb-2">Network</h3>
-              <p class=" text-base leading-relaxed">
+            <div class="p-3 md:p-6 text-white ">
+              <h3 class="text-2xl md:text-3xl font-medium mb-2">Network</h3>
+              <p class="text-sm md:text-base leading-relaxed">
                 We bring together builders and innovators into one collaborative ecosystem. Innovations rarely happen in isolation; it thrives at the intersection of diverse skills and perspectives. Dev Lantern exists to create those intersections and foster meaningful relationships that lead to real impact.
               </p>
             </div>
@@ -76,32 +76,30 @@
 
           <!-- Inspire -->
           <div class="rounded-2xl overflow-hidden shadow-sm p-4 bg-[#E9ECF4]">
-             <img src="../assets/network-join.png" alt="">
-            <div class="p-6 text-[#4B61A4]">
-              <h3 class="text-3xl font-medium  mb-2">Inspire</h3>
-              <p class="text-base leading-relaxed">
+             <img src="../assets/imspire-join.png" alt="">
+            <div class="p-3 md:p-6 text-[#4B61A4]">
+              <h3 class="text-2xl md:text-3xl font-medium  mb-2">Inspire</h3>
+              <p class="text-sm md:text-base leading-relaxed">
                 We amplify the voices of builders and leaders who are shaping the tech ecosystem through innovation and execution. By sharing their journeys, decisions, and lessons learned, we provide our community with relatable role models and practical inspiration. Their stories serve as both guidance and proof of what is possible.
               </p>
             </div>
           </div>
 
-          <!-- Growth -->
           <div class="rounded-2xl overflow-hidden border border-gray-100 p-4 shadow-sm">
             <img src="../assets/growth-join.png" alt="">
-            <div class="p-6 text-[#4B61A4]">
-              <h3 class="text-3xl font-medium  mb-2">Growth</h3>
-              <p class=" text-base leading-relaxed">
+            <div class="p-3 md:p-6 text-[#4B61A4]">
+              <h3 class="text-2xl md:text-3xl font-medium  mb-2">Growth</h3>
+              <p class="text-sm md:text-base leading-relaxed">
                 We design structured initiatives from the Dev Lantern Podcast to Dev Matrix and Code Challenges that challenge members to think deeper and build better. Dev Lantern provides the environment, exposure, and opportunities that enable individuals to advance both technically and strategically.
               </p>
             </div>
           </div>
 
-          <!-- Learn -->
           <div class="rounded-2xl overflow-hidden shadow-sm  p-4 bg-[#243E90]">
             <img src="../assets/learn-join.png" alt="">
-            <div class="p-6 text-[#A1ACCF]">
-              <h3 class="text-3xl font-medium mb-2">Learn</h3>
-              <p class="text-base leading-relaxed">
+            <div class="p-3 md:p-6 text-[#A1ACCF]">
+              <h3 class="text-2xl md:text-3xl font-medium mb-2">Learn</h3>
+              <p class="text-sm md:text-base leading-relaxed">
                 We focus on actionable insights and real-life experiences. Through conversations, workshops, challenges, and content, we help our community translate ideas into execution. Our goal is to equip members with knowledge they can immediately apply in their careers and projects.
               </p>
             </div>
@@ -129,27 +127,41 @@
               <h3 class="text-2xl font-medium mb-4">{{ program.title }}</h3>
               <p class=" text-lg">{{ program.description }}</p>
             </div>
-            <a href="#" class="relative z-20 mt-6 flex items-center gap-1 text-lg font-medium  transition-colors" :class="[program.textColor]">
-              See More <span>→</span>
-            </a>
+            <RouterLink :to="program.link" class="relative z-20 mt-6 flex items-center gap-1 text-lg font-medium transition-colors" :class="[program.textColor]">
+  See More <span>→</span>
+</RouterLink>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="bg-white pt-20 pb-24 px-6">
+    <section class="relative overflow-hidden bg-white pt-32 pb-24 px-6">
+       <div
+        class="absolute inset-0 bg-cover bg-center z-50"
+        style="background-image: url('/bg-2.png')"
+      ></div>
+
+      <div class="absolute top-0 right-0">
+      <img
+        src="../assets/Vector 3.png"
+        alt=""
+        aria-hidden="true"
+        class=" lg:h-full"
+      />
+    </div>
+
       <div class="max-w-6xl mx-auto">
-        <h2 class="text-7xl font-bold text-[#6E6E6E] mb-12">
+        <h2 class="text-5xl md:text-5xl lg:text-7xl font-bold text-[#6E6E6E] mb-12">
           What We're <span class="text-[#000000]">Up To</span>
         </h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-12">
           <!-- Left: description -->
           <div>
-            <p class="text-[#525252] text-2xl mb-16">
+            <p class="text-[#525252] text-lg md:text-2xl mb-16">
               DevMatrix is Dev Lantern's free structured bootcamp designed to equip aspiring and growing tech professionals with practical, in-demand skills.
             </p>
-            <p class="text-[#525252] text-2xl">
+            <p class="text-[#525252] text-lg md:text-2xl">
               We guide participants through hands-on learning, mentorship, and real-world application.
             </p>
           </div>
@@ -159,7 +171,7 @@
             <p class="text-lg pb-2 font-semibold text-white uppercase tracking-wider border-b border-[#6E6E6E] mb-4">Our journey so far:</p>
             <ul class="space-y-3 text-[#BCBCBC]">
               <li v-for="cohort in cohorts" :key="cohort"
-                class="flex items-center gap-3  text-2xl py-2 font-medium">
+                class="flex items-center gap-3 text-lg md:text-2xl py-2 font-medium">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="24" height="24" rx="12" fill="#F0EAF4"/>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M17.096 7.39004L9.93602 14.3L8.03602 12.27C7.68602 11.94 7.13602 11.92 6.73602 12.2C6.34602 12.49 6.23602 13 6.47602 13.41L8.72602 17.07C8.94602 17.41 9.32601 17.62 9.75601 17.62C10.166 17.62 10.556 17.41 10.776 17.07C11.136 16.6 18.006 8.41004 18.006 8.41004C18.906 7.49004 17.816 6.68004 17.096 7.38004V7.39004Z" fill="#9872B5"/>
@@ -173,17 +185,17 @@
 
 
         <div class="rounded-2xl overflow-hidden relative shadow-md">
-          <img
-            src="../assets/dev-latern.jpg"
-            alt="Dev Lantern Podcast"
-            class="w-full h-72 md:h-120 object-cover"
-          />
-          <div class="absolute bottom-0 left-0 right-0  bg-white/30 backdrop-blur-[24px] py-6">
-            <p class="text-white text-3xl w-80% py-4 text-center">
-              Each cohort is intentionally curated to meet the evolving needs of tech ecosystem, bridging the gap between learning and employability.
-            </p>
-          </div>
-        </div>
+  <img
+    src="../assets/dev-latern.jpg"
+    alt="Dev Lantern Podcast"
+    class="w-full h-56 sm:h-72 md:h-96 lg:h-120 object-cover"
+  />
+  <div class="absolute bottom-0 left-0 right-0 bg-white/30 backdrop-blur-[24px] px-3 sm:px-8 py-2 sm:py-6">
+    <p class="text-white text-sm sm:text-base md:text-2xl lg:text-3xl text-center leading-relaxed">
+      Each cohort is intentionally curated to meet the evolving needs of tech ecosystem, bridging the gap between learning and employability.
+    </p>
+  </div>
+</div>
 
       </div>
     </section>
@@ -199,18 +211,21 @@ const programs = [
     description: 'In 2024, we launched the Dev Lantern Podcast to create meaningful experience-driven conversations within the tech ecosystem. This is a platform to spotlight African tech builders and innovators quickly became a channel for practical insight, career clarity, and industry exposure.',
     overlay: 'rgba(36, 62, 144, 1)',   
     textColor: 'text-[#CAD1E4]',
+    link: './programs/podcast'
   },
   {
     title: 'Dev Matrix',
     description: 'In April 2025, we introduced Dev Matrix, our free, structured tech bootcamp designed to close the gap between learning and real-world application. The first cohort focused on Mobile Development, and in continuity is Frontend/Backend and Product Design / Management.',
     overlay: 'rgba(233, 236, 244, 1)', 
     textColor: 'text-[#4B61A4]', 
+    link: './dev-matrix'
   },
   {
     title: 'Code Challenge',
     description: 'In August, we launched the Dev Lantern Code Challenge to push learning beyond theory and into execution. Designed as a hands-on, problem-solving initiative, the Code Challenge encourages collaboration, strengthens technical competence, and identifies emerging talent within the community.',
     overlay: 'rgba(20, 40, 110, 1)',
-    textColor: 'text-[#CAD1E4]',   
+    textColor: 'text-[#CAD1E4]', 
+    link: './programs/code-challenge'  
   },
 ]
 

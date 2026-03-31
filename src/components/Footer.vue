@@ -31,7 +31,7 @@
   <footer class="bg-[#eef0f8] py-12">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      <!-- Top section: Logo + Links -->
+      <!-- Top section -->
       <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
 
         <!-- Logo -->
@@ -45,21 +45,21 @@
         <div>
           <h3 class="text-[#1a237e] font-semibold mb-4">Explore</h3>
           <ul class="space-y-2.5 text-sm text-[#3949ab]">
-            <li><RouterLink to="/" class="hover:text-[#1a237e]">Home</RouterLink></li>
-            <li><RouterLink to="/programs" class="hover:text-[#1a237e]">Programs</RouterLink></li>
+            <li><RouterLink to="/"  class="hover:text-[#1a237e]">Home</RouterLink></li>
+            <!-- <li><RouterLink to="/dev-matrix" class="hover:text-[#1a237e]">Programs</RouterLink></li> -->
             <li><RouterLink to="/community" class="hover:text-[#1a237e]">Community</RouterLink></li>
             <li><RouterLink to="/about" class="hover:text-[#1a237e]">About</RouterLink></li>
             <li><RouterLink to="/contact" class="hover:text-[#1a237e]">Contact</RouterLink></li>
           </ul>
         </div>
 
-        <!-- Our Programs + Social Icons -->
+        <!-- Our Programs -->
         <div>
           <h3 class="text-[#1a237e] font-semibold mb-4">Our Programs</h3>
           <ul class="space-y-2.5 text-sm text-[#3949ab] mb-6">
-            <li><RouterLink to="/devMatrix" class="hover:text-[#1a237e]">Dev Matrix</RouterLink></li>
-            <li><RouterLink to="/devPodcast" class="hover:text-[#1a237e]">Dev Lantern Podcast</RouterLink></li>
-            <li><RouterLink to="/codeChallenge" class="hover:text-[#1a237e]">Code Challenge</RouterLink></li>
+            <li><RouterLink to="/dev-matrix" target="blank" class="hover:text-[#1a237e]">Dev Matrix</RouterLink></li>
+            <li><RouterLink to="/programs/podcast" target="blank" class="hover:text-[#1a237e]">Dev Lantern Podcast</RouterLink></li>
+            <li><RouterLink to="/programs/code-challenge" target="blank" class="hover:text-[#1a237e]">Code Challenge</RouterLink></li>
           </ul>
 
           <!-- Social Icons -->
@@ -92,10 +92,10 @@
         </div>
       </div>
 
-      <!-- Full-width Divider -->
+      <!-- Divider -->
       <div class="border-t border-[#c5cae9]" />
 
-      <!-- Bottom Bar: Copyright left, Walure right -->
+      <!--  Copyright  -->
       <div class="mt-5 flex flex-col sm:flex-row items-center justify-between gap-3">
         <p class="text-sm text-[#3949ab]">
           © {{ copyrightYear }}, All Rights Reserved

@@ -2,21 +2,19 @@
   <div>
     <section class="relative w-full min-h-[520px] flex items-center justify-center overflow-hidden">
 
-      <img
-        src="../assets/hero-header.png"
-        alt=""
-        aria-hidden="true"
-        class="absolute inset-0 w-full h-70% object-cover z-0"
-      />
+      <div
+        class="absolute inset-0 bg-[#0d1266] bg-cover bg-center"
+        style="background-image: url('/main-header.png')"
+      ></div>
 
       <div class="absolute inset-0 bg-[#04064699]"></div>
 
-      <div class="relative z-10 text-center px-6 py-20 max-w-2xl mx-auto">
+      <div class="relative text-center px-6 py-20 max-w-5xl mx-auto">
         <h1 class="text-3xl sm:text-4xl md:text-7xl font-medium text-white">
-          Code <span class="text-[#D3A52A]">Challenge</span>
+          Code <span class="text-[#c9a227]">Challenge</span>
         </h1>
       </div>
-    </section>
+    </section >
 
     <section class="bg-[#F5F8FF]  py-24  ">
 
