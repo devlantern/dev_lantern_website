@@ -66,7 +66,7 @@
     <!-- CTA Button -->
     <div class="hidden md:block">
       <RouterLink
-        to="./dev-matrix"
+        to="/dev-matrix"
         class="bg-[#1a237e] text-white text-sm font-medium px-5 py-2.5 rounded-md hover:bg-[#283593] transition-colors duration-200"
       >
         Apply Now
