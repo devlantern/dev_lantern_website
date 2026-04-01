@@ -123,6 +123,7 @@ const statusSuccess = ref(false)
 const copyrightYear = ref(new Date().getFullYear())
 
 const submitNewsletter = async () => {
+  console.log('API Key:', import.meta.env.VITE_BREVO_API_KEY)
   statusMessage.value = ''
 
   try {
@@ -130,11 +131,11 @@ const submitNewsletter = async () => {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'api-key': 'YOUR_BREVO_API_KEY',   // ← paste your key here
+        'api-key': import.meta.env.VITE_BREVO_API_KEY,
       },
       body: JSON.stringify({
         email: email.value,
-        listIds: [3],                       // ← your list ID number here
+        listIds: [2],                       
         updateEnabled: true,
       }),
     })
