@@ -77,7 +77,7 @@
               <!-- Timestamp badge -->
               <div class="absolute top-3 left-3 flex items-center gap-1.5 bg-black/50 text-white text-xs font-medium px-2.5 py-1 rounded-md">
                 <svg width="10" height="10" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg>
-                2:00
+                0:37
               </div>
 
               <!-- Play button -->
@@ -193,7 +193,7 @@
       <!-- Squiggle -->
       <<div class="absolute top-50 right-[-200px] z-10">
     <img
-      src="../assets/Vector 3.png"
+      src="../assets/Vector.png"
       alt=""
       aria-hidden="true"
       class="lg:h-full"
