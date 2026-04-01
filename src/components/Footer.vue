@@ -122,9 +122,35 @@ const statusMessage = ref('')
 const statusSuccess = ref(false)
 const copyrightYear = ref(new Date().getFullYear())
 
-function submitNewsletter() {
-  statusMessage.value = 'Thanks! You are subscribed.'
-  statusSuccess.value = true
-  email.value = ''
+const submitNewsletter = async () => {
+  statusMessage.value = ''
+
+  try {
+    const res = await fetch('https://api.brevo.com/v3/contacts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'api-key': 'YOUR_BREVO_API_KEY',   // ← paste your key here
+      },
+      body: JSON.stringify({
+        email: email.value,
+        listIds: [3],                       // ← your list ID number here
+        updateEnabled: true,
+      }),
+    })
+
+    if (res.status === 201 || res.status === 204) {
+      statusSuccess.value = true
+      statusMessage.value = 'Thanks for subscribing!'
+      email.value = ''
+    } else {
+      const data = await res.json()
+      statusSuccess.value = false
+      statusMessage.value = data.message || 'Something went wrong.'
+    }
+  } catch (err) {
+    statusSuccess.value = false
+    statusMessage.value = 'Network error. Please try again.'
+  }
 }
 </script>

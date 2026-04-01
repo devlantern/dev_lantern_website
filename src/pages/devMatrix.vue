@@ -65,8 +65,11 @@
             <span class="text-white/40 text-sm">No image available</span>
           </div>
 
-          <!-- Cohort badge  bottom right -->
-          <div class="absolute bottom-4 right-4 bg-black/50 backdrop-blur-sm text-white text-sm font-semibold px-4 py-2 rounded-lg">
+          <!-- Cohort badge -->
+          <div 
+            v-if="activeTrack === 1"
+            class="absolute bottom-4 right-4 bg-black/50 backdrop-blur-sm text-white text-sm font-semibold px-4 py-2 rounded-lg"
+          >
             Cohort I
           </div>
         </div>
@@ -216,10 +219,10 @@ export default {
       // Map track id 
       trackImages: {
         1: "/track1.png",
-        2: "",
-        3: "",
-        4: "",
-        5: "",
+        2: "/track2.jpeg",
+        3: "/track3.jpeg",
+        4: "/track4.jpeg",
+        5: "/track5.jpeg",
       },
 
       // appSteps: [
