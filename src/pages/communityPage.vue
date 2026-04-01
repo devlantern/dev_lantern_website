@@ -69,10 +69,7 @@
   <div class="flex flex-col gap-12 items-center max-w-6xl mx-auto px-6">
     <div class="flex flex-col md:flex-row gap-6 w-full">
       <img src="../assets/acesssNetwork.png" class="w-full md:w-2/3" alt="Access to Network">
-      <div class="bg-[#243E90] w-full md:w-1/3 p-6 rounded-b-xl rounded-tr-xl flex flex-col justify-end pb-12 gap-4">
-        <img src="../assets/highlight1.png" alt="" aria-hidden="true"
-              class="absolute inset-0 w-full h-full object-cover z-20" />
-              <div class="absolute inset-0 z-10" :style="rgba(36, 62, 144, 1)"></div>
+      <div class="bg-[#243E90] w-full md:w-1/3 p-6 rounded-b-xl rounded-tr-xl flex flex-col justify-end pb-12 gap-4" >
         <h3 class="text-xl md:text-3xl text-white ">Access to network</h3>
         <p class="text-[#CAD1E4] text-base md:text-xl ">To create a structured, intentional, and high-impact tech community where learning, collaboration, and innovation thrive.</p>
       </div>
