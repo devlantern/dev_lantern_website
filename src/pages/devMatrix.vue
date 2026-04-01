@@ -182,12 +182,12 @@
          <!-- CTA Button -->
         <div class="mt-10 flex justify-center ">
           <
-          <RouterLink
-            to="/"
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScExMcVwvdLVk2wTN5dpJ7t0KPesYB0QP1iBDg7FifPX_X2cQ/viewform?usp=publish-editor" target="_blank"
+            
             class="bg-[#243E90] hover:bg-[#ffff]  text-white text-sm sm:text-lg font-medium px-10 sm:px-60 py-2.5 rounded-md transition-colors duration-200"
           >
             Apply Now
-          </RouterLink>
+        </a>
         </div>
 
       </div>

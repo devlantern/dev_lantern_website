@@ -211,7 +211,7 @@ export default {
     return {
 
       isPlaying: false,
-      youtubeVideoId: "OCeLC0URkZ0",
+      youtubeVideoId: "UHVNvQhCv-A",
 
       activeCategory: 1,
 
@@ -276,7 +276,7 @@ export default {
       ],
 
       heroImage:        "/bg-3 1.png",
-      podcastThumbnail: "/podcast.png",
+      podcastThumbnail: "/devpod.png",
       logoImage:        "/dev-logo.png",
       guestSectionBg:   "/bg-3 1.png",
       guestImage1:      "/guest1.png",
