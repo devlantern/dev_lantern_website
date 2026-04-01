@@ -42,18 +42,6 @@
       class="w-full h-[400px] md:h-[500px] object-cover px-4"
     />
 
-    <!-- <img
-      src="../assets/playtrack.png"
-      alt=""
-      aria-hidden="true"
-      class="absolute left-8 top-4 h-6"
-    /> -->
-
-    <!-- <img
-      src="../assets/play.png"
-      alt="Play"
-      class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-18 w-18"
-    /> -->
 
     <img
       src="../assets/latern-logo.png"

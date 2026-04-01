@@ -72,15 +72,45 @@
   
 
     <section class="bg-[#E9ECF4] py-10 px-6">
-      <p class="text-center text-base text-[#667085] uppercase tracking-widest mb-6 font-medium">Our Partners</p>
-      <div class="flex flex-wrap items-center justify-center gap-10 max-w-4xl mx-auto">
-         <img src="../assets/hub.png" alt="hub" >
-         <img src="../assets/walure-logo.png" alt="Walure" >
-        <img src="../assets/cardify.png" alt="Cardify" >
-        <img src="../assets/axiom.png" alt="axiom" >
-        <img src="../assets/Smart-Learn-logo.png" alt="Smart Learn" >
-      </div>
-    </section>
+  <p class="text-center text-base text-[#667085] uppercase tracking-widest mb-6 font-medium">Our Partners</p>
+
+  <div class="relative flex items-center max-w-6xl mx-auto gap-3">
+
+    <button
+      @click="scrollLeft"
+      class="flex-shrink-0 hover:opacity-70 transition-opacity disabled:opacity-30"
+      :disabled="isAtStart"
+    >
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.75 21.25L7.5 15L13.75 8.75M22.5 21.25L16.25 15L22.5 8.75" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+
+
+    <div
+      ref="scrollContainer"
+      class="flex items-center gap-10 overflow-x-auto scroll-smooth scrollbar-hide flex-1"
+      @scroll="updateScrollState"
+    >
+      <img src="../assets/hub.png"              alt="Hub"        class="" />
+      <img src="../assets/walure-logo.png"      alt="Walure"     class="" />
+      <img src="../assets/cardify.png"          alt="Cardify"    class="" />
+      <img src="../assets/axiom.png"            alt="Axiom"      class="" />
+      <img src="../assets/Smart-Learn-logo.png" alt="Smart Learn" class="" />
+    </div>
+
+    <button
+      @click="scrollRight"
+      class="flex-shrink-0 hover:opacity-70 transition-opacity disabled:opacity-30"
+      :disabled="isAtEnd"
+    >
+      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.25 21.25L22.5 15L16.25 8.75M7.5 21.25L13.75 15L7.5 8.75" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+
+  </div>
+</section>
 
     
     <section class="bg-white py-20 px-6">
@@ -153,7 +183,7 @@
               <h3 class="text-2xl font-medium mb-4">{{ program.title }}</h3>
               <p class=" text-lg">{{ program.description }}</p>
             </div>
-            <RouterLink :to="program.link" class="relative z-20 mt-6 flex items-center gap-1 text hover:scale-105 hover:underline transition-transform duration-200-lg font-medium transition-colors" :class="[program.textColor]">
+            <RouterLink :to="program.link" class="relative z-20 mt-6 flex items-center gap-1 underline md:no-underline text hover:scale-105 hover:underline transition-transform duration-200-lg font-medium transition-colors" :class="[program.textColor]">
   See More <span>→</span>
 </RouterLink>
           </div>
@@ -230,6 +260,27 @@
 </template>
 
 <script setup>
+import { ref, onMounted } from 'vue'
+
+const scrollContainer = ref(null)
+const isAtStart = ref(true)
+const isAtEnd = ref(false)
+
+const scrollLeft = () => {
+  scrollContainer.value.scrollBy({ left: -200, behavior: 'smooth' })
+}
+
+const scrollRight = () => {
+  scrollContainer.value.scrollBy({ left: 200, behavior: 'smooth' })
+}
+
+const updateScrollState = () => {
+  const el = scrollContainer.value
+  isAtStart.value = el.scrollLeft <= 0
+  isAtEnd.value = el.scrollLeft + el.clientWidth >= el.scrollWidth - 1
+}
+
+onMounted(() => updateScrollState())
 
 const programs = [
   {
@@ -271,5 +322,12 @@ const cohorts = [
 @keyframes scroll-left {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }
 </style>

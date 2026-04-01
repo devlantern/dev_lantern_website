@@ -16,7 +16,14 @@
         <p class="mt-7 text-base sm:text-xl text-[#E9ECF4] font-medium">
          DevLantern is a growing <span class="text-[#D3A52A]">technology community</span> dedicated to empowering developers, product thinkers, designers, and tech enthusiasts through learning, collaboration, and meaningful <span class="text-[#D3A52A]">conversations.</span>
         </p>
+        <div class="mt-14 cursor">
+          <button> 
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScbghMF6tQ8Pr0-pMsgTxrcVmaf02aEIdQske-Me2KCC5NxhQ/viewform?usp=sf_link" target="blank" class=" bg-white text-[#243E90] py-3 px-8  hover:text-white hover:bg-blue-700 rounded-lg font-semi0bold text-lg transition-colors duration-200" >Join Our Community</a>
+      </button>
+        </div>
       </div>
+
+
     </section >
 
     <section class="relative overflow-hidden py-36 ">

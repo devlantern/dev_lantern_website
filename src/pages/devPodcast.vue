@@ -1,19 +1,21 @@
 <template>
   <div class="w-full font-sans bg-[#eef2f8] text-[#1a1a2e]">
 
-    <!-- HERO SECTION  -->
-    <section class="relative w-full min-h-[595px] flex items-center justify-center overflow-hidden">
+    <section class="relative w-full min-h-[520px] flex items-center justify-center overflow-hidden">
+
       <div
-        class="absolute inset-0 bg-[#243E90] bg-cover bg-center"
-        :style="heroImage ? { backgroundImage: `url('${heroImage}')` } : {}"
+        class="absolute inset-0 bg-[#0d1266] bg-cover bg-center"
+        style="background-image: url('/main-header.png')"
       ></div>
-      <div class="absolute inset-0 bg-[#243E90]/70"></div>
-      <div class="relative z-10 text-center px-6 py-16">
-        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight tracking-tight">
+
+      <div class="absolute inset-0 bg-[#04064699]"></div>
+
+      <div class="relative text-center px-6 py-20 max-w-5xl mx-auto">
+        <h1 class="text-3xl sm:text-4xl md:text-7xl font-medium text-white">
           Dev <span class="text-[#c9a227]">Podcast</span>
         </h1>
       </div>
-    </section>
+    </section >
 
 
     <!--  INTRO TEXT -->

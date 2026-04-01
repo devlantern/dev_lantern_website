@@ -8,17 +8,20 @@
     </div>
 
     <!-- Desktop Nav -->
-    <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-[#1a237e]">
+    <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-[#7585B9]">
       <li>
-        <RouterLink to="/" class="hover:text-blue-700" active-class="font-semibold">Home</RouterLink>
+        <RouterLink to="/" class="hover:text-blue-700" active-class="font-semibold text-[#243E90]">Home</RouterLink>
       </li>
       <li>
-        <RouterLink to="/about" class="hover:text-blue-700" active-class="font-semibold">About</RouterLink>
+        <RouterLink to="/about" class="hover:text-blue-700" active-class="font-semibold text-[#243E90]">About</RouterLink>
       </li>
 
       <!-- Program Dropdown -->
       <li class="relative" @mouseenter="isProgramOpen = true" @mouseleave="isProgramOpen = false">
-        <button class="flex items-center gap-1 hover:text-blue-700 font-semibold text-[#1a237e] focus:outline-none">
+        <button
+        class="flex items-center gap-1 hover:text-blue-700 font-semibold focus:outline-none"
+        :class="isProgramActive ? 'text-[#243E90]' : 'text-[#7585B9]'"
+>
           Program
           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform duration-200" :class="{ 'rotate-180': isProgramOpen }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -56,10 +59,10 @@
       </li>
 
       <li>
-        <RouterLink to="/community" class="hover:text-blue-700" active-class="font-semibold">Community</RouterLink>
+        <RouterLink to="/community" class="hover:text-blue-700" active-class="font-semibold text-[#243E90]">Community</RouterLink>
       </li>
       <li>
-        <RouterLink to="/contact" class="hover:text-blue-700" active-class="font-semibold">Contact</RouterLink>
+        <RouterLink to="/contact" class="hover:text-blue-700" active-class="font-semibold text-[#243E90]">Contact</RouterLink>
       </li>
     </ul>
 
@@ -132,12 +135,19 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
+import { useRoute } from 'vue-router'
 import logo from '../assets/logo.png'
 
 const isMenuOpen = ref(false)
 const isProgramOpen = ref(false)
 const isMobileProgramOpen = ref(false)
+
+const route = useRoute()
+
+const isProgramActive = computed(() => {
+  return ['/dev-matrix', '/programs/podcast', '/programs/code-challenge'].includes(route.path)
+})
 </script>
 
 <style scoped>
