@@ -153,7 +153,7 @@
               <h3 class="text-2xl font-medium mb-4">{{ program.title }}</h3>
               <p class=" text-lg">{{ program.description }}</p>
             </div>
-            <RouterLink :to="program.link" class="relative z-20 mt-6 flex items-center gap-1 text-lg font-medium transition-colors" :class="[program.textColor]">
+            <RouterLink :to="program.link" class="relative z-20 mt-6 flex items-center gap-1 text hover:scale-105 hover:underline transition-transform duration-200-lg font-medium transition-colors" :class="[program.textColor]">
   See More <span>→</span>
 </RouterLink>
           </div>

@@ -25,7 +25,7 @@
 
         <div class="max-w-6xl mx-auto bg-white p-4 ">
           <div class="flex flex-col md:flex-row gap-3 px-4 w-full mt-6 mb-12">
-          <p class=" w-full md:w-2/7 text-white bg-[#1F357A] px-6 py-2 font-medium text-base md:text-xl rounded-md text-center">
+          <p class=" w-full md:w-2/7 text-[#243E90] bg-[#E9ECF4] px-6 py-2 font-medium text-base md:text-xl rounded-md text-center">
           Skill Mastery
           </p>
           <p class="w-full md:w-3/7 text-[#243E90] bg-[#E9ECF4] px-12 py-2 font-medium text-base md:text-xl rounded-md text-center">
@@ -42,18 +42,18 @@
       class="w-full h-[400px] md:h-[500px] object-cover px-4"
     />
 
-    <img
+    <!-- <img
       src="../assets/playtrack.png"
       alt=""
       aria-hidden="true"
       class="absolute left-8 top-4 h-6"
-    />
+    /> -->
 
-    <img
+    <!-- <img
       src="../assets/play.png"
       alt="Play"
       class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-18 w-18"
-    />
+    /> -->
 
     <img
       src="../assets/latern-logo.png"
