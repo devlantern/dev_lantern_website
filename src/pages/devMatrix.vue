@@ -158,16 +158,6 @@
           </div>
         </div>
 
-        <!-- Squiggle -->
-        <div class="flex justify-end mt-6 pr-2">
-          <img
-            v-if="squiggleImage"
-            :src="squiggleImage"
-            alt=""
-            aria-hidden="true"
-            class="w-[90px] sm:w-[120px] h-auto object-contain block"
-          />
-        </div>
          <!-- CTA Button -->
         <div class="mt-10 flex justify-center ">
           <a href="https://docs.google.com/forms/d/e/1FAIpQLScExMcVwvdLVk2wTN5dpJ7t0KPesYB0QP1iBDg7FifPX_X2cQ/viewform?usp=publish-editor" target="_blank"
@@ -204,8 +194,8 @@ export default {
       trackImages: {
         1: "/track1.png",
         2: "/frontendDev.png",
-        3: "/BackendDev.png",
-        4: "/productDesign.png",
+        3: "/backendimg.png",
+        4: "/productimg.png",
         5: "/ProductManag.png",
       },
 
@@ -250,7 +240,6 @@ export default {
       heroImage:        "/bg-3 1.png",
       appSectionBg:     "/bg-3 1.png",
       eligibilityImage: "/application.png",
-      squiggleImage:    "/vector.png",
     };
   },
 };
