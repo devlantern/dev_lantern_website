@@ -196,7 +196,7 @@ export default {
         2: "/frontendDev.png",
         3: "/backendimg.png",
         4: "/productimg.png",
-        5: "/ProductManag.png",
+        5: "/productManagement.png",
       },
 
 
