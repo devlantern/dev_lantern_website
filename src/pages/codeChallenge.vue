@@ -37,9 +37,9 @@
         </div>
         <div class="relative w-full my-6 rounded-xl overflow-hidden">
     <img
-      src="../assets/codeImg.png"
+      src="/codeimg.png"
       alt="Code challenge session"
-      class="w-full h-[400px] md:h-[500px] object-cover px-4"
+      class="w-full h-full md:h-full object-cover px-4"
     />
 
 
