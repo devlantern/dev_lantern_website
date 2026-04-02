@@ -203,7 +203,6 @@ export default {
       // Map track id 
       trackImages: {
         1: "/track1.png",
-<<<<<<< HEAD
         2: "/frontendDev.png",
         3: "/BackendDev.png",
         4: "/productDesign.png",

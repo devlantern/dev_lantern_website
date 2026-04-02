@@ -1,22 +1,27 @@
 @import "tailwindcss";
 
-
 @font-face {
-  font-family: 'YourFontName';
-  src: url('./fonts/') format('truetype');
-  font-weight: 400;
+  font-family: 'SweetSans';
+  src: url('./fonts/SweetSansPro-Light.eot') format('truetype');
+  font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'YourFontName';
-  src: url('./fonts/YourFont-Bold.ttf') format('truetype');
+  font-family: 'SweetSans';
+  src: url('./fonts/SweetSansPro-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SweetSans';
+  src: url('./fonts/SweetSansPro-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'YourFontName';
-  src: url('./fonts/YourFont-Medium.ttf') format('truetype');
-  font-weight: 500;
-  fo
+
+@theme {
+  --font-sans: 'SweetSans', sans-serif;
+}
