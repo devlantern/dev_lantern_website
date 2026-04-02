@@ -76,25 +76,49 @@
   <div class="flex flex-col gap-12 items-center max-w-6xl mx-auto px-6">
     <div class="flex flex-col md:flex-row gap-6 w-full">
       <img src="../assets/acesssNetwork.png" class="w-full md:w-2/3" alt="Access to Network">
-      <div class="bg-[#243E90] w-full md:w-1/3 p-6 rounded-b-xl rounded-tr-xl flex flex-col justify-end pb-12 gap-4" >
-        <h3 class="text-xl md:text-3xl text-white ">Access to network</h3>
-        <p class="text-[#CAD1E4] text-base md:text-xl ">To create a structured, intentional, and high-impact tech community where learning, collaboration, and innovation thrive.</p>
+      <div class="w-full md:w-1/3 p-6 rounded-b-xl rounded-tr-xl flex flex-col justify-end pb-12 gap-4 relative overflow-hidden" >
+        <img
+    src="../assets/bg9.png"
+    alt=""
+    aria-hidden="true"
+    class="absolute inset-0 w-full h-full object-cover z-10"
+  />
+  <div class="absolute inset-0 bg-[#243E90]/80 z-10"></div>
+        <h3 class="text-xl md:text-3xl text-white z-50 ">Access to network</h3>
+        <p class="text-[#CAD1E4] text-base md:text-xl z-50 ">To create a structured, intentional, and high-impact tech community where learning, collaboration, and innovation thrive.</p>
       </div>
     </div>
+
     <div class="flex flex-col md:flex-row gap-6 w-full">
-      <div class="bg-[#E9ECF4] w-full md:w-1/3 p-6 rounded-b-xl rounded-tr-xl flex flex-col justify-end pb-12 gap-4">
-        <h3 class="text-xl md:text-3xl text-[#243E90] ">Early access to programs</h3>
-        <p class="text-[#4B61A4] text-base md:text-xl ">To become leading community for meaningful tech conversations, talent development, and ecosystem growth across Africa.</p>
+      <div class="bg-[#E9ECF4] order-2 md:order-1 w-full md:w-1/3 p-6 rounded-b-xl rounded-tr-xl flex flex-col justify-end pb-12 gap-4 relative overflow-hidden" >
+        <img
+         src="../assets/bg9.png"
+         alt=""
+         aria-hidden="true"
+         class="absolute inset-0 w-full h-full object-cover z-10"
+         />
+         <div class="absolute inset-0 bg-[#E9ECF4]/80 z-10 "></div>
+        <h3 class="text-xl md:text-3xl text-[#243E90] z-50">Early access to programs</h3>
+        <p class="text-[#4B61A4] text-base md:text-xl z-50 ">To become leading community for meaningful tech conversations, talent development, and ecosystem growth across Africa.</p>
       </div>
-      <img src="../assets/programImg.png" class="w-full md:w-2/3" alt="Access to Network">
+      <img src="../assets/programImg.png" class="order-1 md:order-2 w-full md:w-2/3" alt="Access to Network">
     </div>
+    
     <div class="flex flex-col md:flex-row gap-6 w-full">
-      <div class="bg-[#243E90] w-full md:w-1/3 p-6 rounded-xl flex flex-col justify-end pb-12 gap-4">
-        <h3 class="text-xl md:text-3xl text-white ">Growth pathways</h3>
-        <p class="text-[#CAD1E4] text-base md:text-xl ">To create a structured, intentional, and high-impact tech community where learning, collaboration, and innovation thrive.</p>
+      <div class="order-2 md:order-1 w-full md:w-1/3 p-6 rounded-xl flex flex-col justify-end pb-12 gap-4 relative overflow-hidden" >
+        <img
+         src="../assets/bg9.png"
+         alt=""
+         aria-hidden="true"
+         class="absolute inset-0 w-full h-full object-cover z-0"
+         />
+         <div class="absolute inset-0 bg-[#243E90]/80 z-10"></div>
+        <h3 class="text-xl md:text-3xl text-white z-50 ">Growth pathways</h3>
+        <p class="text-[#CAD1E4] text-base md:text-xl z-50 ">To create a structured, intentional, and high-impact tech community where learning, collaboration, and innovation thrive.</p>
       </div>
-      <img src="../assets/pathwayImg.png" class="w-full md:w-2/3" alt="Access to Network">
+      <img src="../assets/pathwayImg.png" class="order-1 md:order-2 w-full md:w-2/3" alt="Access to Network">
     </div>
+
   </div>
 
 </section>
