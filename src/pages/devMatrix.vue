@@ -77,7 +77,7 @@
         <!-- Dot indicators -->
         <div class="flex items-center justify-center gap-2 mt-5">
           <button
-            v-for="(track, idx) in tracks"
+            v-for="(track) in tracks"
             :key="track.id"
             @click="activeTrack = track.id"
             :class="[
@@ -209,11 +209,6 @@ export default {
         5: "/ProductManag.png",
       },
 
-      // appSteps: [
-      //   { id: 1, label: "Dev Lantern" },
-      //   { id: 2, label: "Dev Matrix" },
-      //   { id: 3, label: "Code Challenge" },
-      // ],
 
       stepCards: [
         {

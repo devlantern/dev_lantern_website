@@ -92,11 +92,11 @@
       class="flex items-center gap-10 overflow-x-auto scroll-smooth scrollbar-hide flex-1"
       @scroll="updateScrollState"
     >
-      <img src="../assets/hub.png"              alt="Hub"        class="" />
-      <img src="../assets/walure-logo.png"      alt="Walure"     class="" />
-      <img src="../assets/cardify.png"          alt="Cardify"    class="" />
-      <img src="../assets/axiom.png"            alt="Axiom"      class="" />
-      <img src="../assets/Smart-Learn-logo.png" alt="Smart Learn" class="" />
+      <img src="../assets/hub.png"              alt="Hub"        class="grayscale hover:grayscale-0" />
+      <img src="../assets/walure-logo.png"      alt="Walure"     class="grayscale hover:grayscale-0" />
+      <img src="../assets/cardify.png"          alt="Cardify"    class="grayscale hover:grayscale-0" />
+      <img src="../assets/axiom.png"            alt="Axiom"      class="grayscale hover:grayscale-0" />
+      <img src="../assets/Smart-Learn-logo.png" alt="Smart Learn" class="grayscale hover:grayscale-0" />
     </div>
 
     <button

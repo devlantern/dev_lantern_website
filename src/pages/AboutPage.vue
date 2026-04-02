@@ -289,7 +289,7 @@ export default {
   { name: "Otega Ovie",          role: "Technology",                photo: "/otega.png",    x: "",       linkedin: "https://www.linkedin.com/in/PrinceTegaton/"       },
   { name: "Fehintola Oladele",   role: "Community",                 photo: "/tola.png",     x: "https://x.com/fehintolaoladel",        linkedin: "https://www.linkedin.com/in/oladele-fehintola/"        },
   { name: "Segun Oroyo",         role: "Branding & Publicity",      photo: "/segun.png",    x: "",       linkedin: "https://www.linkedin.com/in/segun-oroyo"       },
-  { name: "Chigozie Ifeanyichu", role: "Legal",                     photo: "/chigozie.png", x: "https://x.com/Chigozieialex",    linkedin: ""    },
+  { name: "Chigozie Ifeanyichu", role: "Legal",                     photo: "/chigozie.png", x: "https://x.com/Chigozieialex",    linkedin: " https://x.com/Chigozieialex "    },
   { name: "Tunde Adetunla",      role: "Project",                   photo: "/tunde.png",    x: "",       linkedin: "https://www.linkedin.com/in/omotunde-adetula-4797a638/?originalSubdomain=ng"       },
   { name: "Anuoluwa Balogun",    role: "Project Assistant",         photo: "/anu.png",      x: "",         linkedin: "https://www.linkedin.com/in/anuoluwa-balogun-sfc%E2%84%A2-6062341b5/?originalSubdomain=ng"         },
   { name: "Nnamdi Azodo",        role: "Sponsorship & Partnership", photo: "/nnamdi.png",   x: "https://x.com/SimplyAzodo",      linkedin: "https://www.linkedin.com/in/nnamdi-azodo/"      },

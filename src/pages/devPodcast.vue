@@ -193,12 +193,12 @@
       </div>
 
       <!-- Squiggle -->
-      <<div class="absolute top-50 right-[-200px] z-10">
+      <div class="absolute top-50 right-[-200px] z-10">
     <img
       src="../assets/Vector.png"
       alt=""
       aria-hidden="true"
-      class="lg:h-full"
+      class="hidden md:block lg:h-full"
     />
   </div>
     </section>

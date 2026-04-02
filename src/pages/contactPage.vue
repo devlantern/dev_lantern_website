@@ -58,7 +58,7 @@
               <select
                 v-model="form.inquiry"
                 name="inquiry"
-                class="w-full border border-[#D9D9D9] rounded-lg px-4 py-3 text-sm text-[#BCBCBC] focus:outline-none focus:border-[#243E90] appearance-none bg-white pr-10"
+                class="w-full border border-[#D9D9D9] rounded-lg px-4 py-3 text-sm text-[#333] focus:outline-none focus:border-[#243E90] appearance-none bg-white pr-10"
               >
                 <option value="" disabled selected>Inquiry type</option>
                 <option value="general">General</option>
@@ -85,6 +85,15 @@
             ></textarea>
           </div>
 
+          
+          <div class="flex justify-center">
+            <div id="recaptcha-container"></div>
+          </div>
+
+          <p v-if="captchaError" class="text-red-500 text-sm text-center -mt-2">
+           Please complete the CAPTCHA before submitting.
+          </p>
+
           <button
             type="submit"
             :disabled="isSubmitting"
@@ -100,7 +109,37 @@
 </template>
 
 <script setup>
-import { ref, reactive } from 'vue'
+import { ref, reactive, onMounted } from 'vue'
+
+
+const siteKey = '6LdkzKIsAAAAAPcwD3aL6wuHUTxwTMXqIZ5ZcFFj' 
+const captchaToken = ref('')
+const captchaError = ref(false)
+
+onMounted(() => {
+  window.onCaptchaDone = (token) => {
+    captchaToken.value = token
+    captchaError.value = false
+  }
+
+  window.onCaptchaGone = () => {
+    captchaToken.value = ''
+  }
+
+  const renderCaptcha = () => {
+    if (window.grecaptcha && document.getElementById('recaptcha-container')) {
+      window.grecaptcha.render('recaptcha-container', {
+        sitekey: siteKey,
+        callback: 'onCaptchaDone',
+        'expired-callback': 'onCaptchaGone',
+      })
+    } else {
+      setTimeout(renderCaptcha, 300)
+    }
+  }
+
+  renderCaptcha()
+})
 
 const WEB3FORMS_ACCESS_KEY = 'df1a4826-9339-4447-9bd4-3586a9b438d4'
 
@@ -116,9 +155,10 @@ const statusMessage = ref('')
 const statusSuccess = ref(false)
 
 const onSubmit = async () => {
-  isSubmitting.value = true
-  statusMessage.value = ''
-
+ if (!captchaToken.value) {
+    captchaError.value = true
+    return
+  }
   try {
     const payload = {
       access_key: WEB3FORMS_ACCESS_KEY,
