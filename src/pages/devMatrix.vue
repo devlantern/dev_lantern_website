@@ -102,22 +102,6 @@
       <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-8">
         <h2 class="text-2xl sm:text-3xl font-bold text-white mb-8">Application Process</h2>
 
-        <!-- Three step tabs
-        <div class="grid grid-cols-3 gap-3 mb-4">
-          <button
-            v-for="step in appSteps"
-            :key="step.id"
-            @click="activeStep = step.id"
-            :class="[
-              'rounded-lg px-4 py-3 text-sm font-semibold text-left transition-all duration-200',
-              activeStep === step.id
-                ? 'bg-[#1a2f7a] text-white'
-                : 'bg-[#E9ECF4] border border-[#4a5a9a] text-[#243E90] hover:border-[#6a7ac0]'
-            ]"
-          >
-            {{ step.label }}
-          </button>
-        </div> -->
 
         <!-- Step cards -->
         <div class="grid grid-row-3 sm:grid-cols-3 gap-3 mb-6">
@@ -216,10 +200,10 @@ export default {
       // Map track id 
       trackImages: {
         1: "/track1.png",
-        2: "",
-        3: "",
-        4: "",
-        5: "",
+        2: "/frontendDev.png",
+        3: "/BackendDev.png",
+        4: "/productDesign.png",
+        5: "/ProductManag.png",
       },
 
       // appSteps: [

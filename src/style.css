@@ -1,1 +1,22 @@
 @import "tailwindcss";
+
+
+@font-face {
+  font-family: 'YourFontName';
+  src: url('./fonts/') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'YourFontName';
+  src: url('./fonts/YourFont-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'YourFontName';
+  src: url('./fonts/YourFont-Medium.ttf') format('truetype');
+  font-weight: 500;
+  fo

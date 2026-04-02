@@ -71,7 +71,7 @@
     </section>
   
 
-    <section class="bg-[#E9ECF4] py-10 px-6">
+  <section class="bg-[#E9ECF4] py-10 px-6">
   <p class="text-center text-base text-[#667085] uppercase tracking-widest mb-6 font-medium">Our Partners</p>
 
   <div class="relative flex items-center max-w-6xl mx-auto gap-3">
