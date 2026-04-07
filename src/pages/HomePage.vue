@@ -307,7 +307,7 @@ const programs = [
   },
   {
     title: 'Dev Matrix',
-    description: 'In April 2025, we introduced Dev Matrix, our free, structured tech bootcamp designed to close the gap between learning and real-world application. The first cohort focused on Mobile Development, and in continuity is Frontend/Backend and Product Design / Management.',
+    description: 'In April 2025, we introduced Dev Matrix, our free, structured tech bootcamp designed to close the gap between learning and real-world application. The first cohort focused on Mobile Development, and in continuity is Frontend/Backend, Product Design / Management and Software Quality Assurance.',
     overlay: 'rgba(233, 236, 244, 1)', 
     textColor: 'text-[#4B61A4]', 
     link: './dev-matrix'
@@ -325,6 +325,7 @@ const cohorts = [
   'Cohort 1: Mobile Development',
   'Cohort 2: Frontend & Backend Engineering',
   'Cohort 3: Product Design & Product Management',
+  'Cohort 4: Software Quality Assurance',
 ]
 </script>
 
