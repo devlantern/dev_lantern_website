@@ -72,46 +72,47 @@
   
 
   <section class="bg-[#E9ECF4] py-10 px-6">
-  <p class="text-center text-base text-[#667085] uppercase tracking-widest mb-6 font-medium">Our Partners</p>
+    <p class="text-center text-base text-[#667085] uppercase tracking-widest mb-6 font-medium">Our Partners</p>
 
-  <div class="relative flex items-center max-w-6xl mx-auto gap-3">
+    <div class="relative flex items-center max-w-6xl mx-auto">
 
-    <button
-      @click="scrollLeft"
-      class="flex-shrink-0 hover:opacity-70 transition-opacity disabled:opacity-30"
-      :disabled="isAtStart"
-    >
-      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M13.75 21.25L7.5 15L13.75 8.75M22.5 21.25L16.25 15L22.5 8.75" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </button>
+      <button
+        @click="scrollLeft"
+        class="flex-shrink-0 z-10 hover:opacity-70 transition-opacity disabled:opacity-30 px-2"
+        :disabled="isAtStart"
+      >
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.75 21.25L7.5 15L13.75 8.75M22.5 21.25L16.25 15L22.5 8.75" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
 
+      <div
+        ref="scrollContainer"
+        class="flex items-center gap-10 overflow-x-auto scroll-smooth scrollbar-hide flex-1 py-2"
+        style="scroll-behavior: smooth;"
+        @scroll="updateScrollState"
+      >
+        <div class="flex items-center gap-10 mx-auto">
+          <img src="../assets/hub.png"              alt="Hub"         class="flex-shrink-0  w-auto grayscale hover:grayscale-0" />
+          <img src="../assets/walure-logo.png"      alt="Walure"      class="flex-shrink-0  w-auto grayscale hover:grayscale-0" />
+          <img src="../assets/cardify.png"          alt="Cardify"     class="flex-shrink-0  w-auto grayscale hover:grayscale-0" />
+          <img src="../assets/axiom.png"            alt="Axiom"       class="flex-shrink-0  w-auto grayscale hover:grayscale-0" />
+          <img src="../assets/Smart-Learn-logo.png" alt="Smart Learn" class="flex-shrink-0  w-auto grayscale hover:grayscale-0" />
+        </div>
+      </div>
 
-    <div
-      ref="scrollContainer"
-      class="flex items-center gap-10 overflow-x-auto scroll-smooth scrollbar-hide flex-1"
-      @scroll="updateScrollState"
-    >
-      <img src="../assets/hub.png"              alt="Hub"        class="grayscale hover:grayscale-0" />
-      <img src="../assets/walure-logo.png"      alt="Walure"     class="grayscale hover:grayscale-0" />
-      <img src="../assets/cardify.png"          alt="Cardify"    class="grayscale hover:grayscale-0" />
-      <img src="../assets/axiom.png"            alt="Axiom"      class="grayscale hover:grayscale-0" />
-      <img src="../assets/Smart-Learn-logo.png" alt="Smart Learn" class="grayscale hover:grayscale-0" />
+      <button
+        @click="scrollRight"
+        class="flex-shrink-0 z-10 hover:opacity-70 transition-opacity disabled:opacity-30 px-2"
+        :disabled="isAtEnd"
+      >
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16.25 21.25L22.5 15L16.25 8.75M7.5 21.25L13.75 15L7.5 8.75" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+
     </div>
-
-    <button
-      @click="scrollRight"
-      class="flex-shrink-0 hover:opacity-70 transition-opacity disabled:opacity-30"
-      :disabled="isAtEnd"
-    >
-      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M16.25 21.25L22.5 15L16.25 8.75M7.5 21.25L13.75 15L7.5 8.75" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </button>
-
-  </div>
-</section>
-
+  </section>
     
     <section class="bg-white py-20 px-6">
       <div class="max-w-6xl mx-auto">
@@ -260,27 +261,41 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 
 const scrollContainer = ref(null)
 const isAtStart = ref(true)
 const isAtEnd = ref(false)
 
-const scrollLeft = () => {
-  scrollContainer.value.scrollBy({ left: -200, behavior: 'smooth' })
-}
-
-const scrollRight = () => {
-  scrollContainer.value.scrollBy({ left: 200, behavior: 'smooth' })
-}
-
 const updateScrollState = () => {
   const el = scrollContainer.value
+  if (!el) return
   isAtStart.value = el.scrollLeft <= 0
   isAtEnd.value = el.scrollLeft + el.clientWidth >= el.scrollWidth - 1
 }
 
-onMounted(() => updateScrollState())
+const scrollLeft = () => {
+  const el = scrollContainer.value
+  if (!el) return
+  el.scrollBy({ left: -(el.clientWidth * 0.75), behavior: 'smooth' })
+  setTimeout(updateScrollState, 400)
+}
+
+const scrollRight = () => {
+  const el = scrollContainer.value
+  if (!el) return
+  el.scrollBy({ left: el.clientWidth * 0.75, behavior: 'smooth' })
+  setTimeout(updateScrollState, 400)
+}
+
+onMounted(() => {
+  updateScrollState()
+  window.addEventListener('resize', updateScrollState)
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', updateScrollState)
+})
 
 const programs = [
   {
@@ -312,7 +327,6 @@ const cohorts = [
   'Cohort 3: Product Design & Product Management',
 ]
 </script>
-
 
 <style scoped>
 .carousel-track {
