@@ -188,6 +188,7 @@ export default {
         { id: 3, label: "Backend Development" },
         { id: 4, label: "Product Design" },
         { id: 5, label: "Product Management" },
+        { id: 6, label: "Software Quality Assurance" },
       ],
 
       // Map track id 
@@ -197,6 +198,7 @@ export default {
         3: "/backendimg.png",
         4: "/productimg.png",
         5: "/productManagement.png",
+        6: "/qa.png",
       },
 
 
