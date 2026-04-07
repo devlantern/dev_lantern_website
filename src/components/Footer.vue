@@ -115,7 +115,7 @@
 <script setup>
 import { ref } from 'vue'
 import footerLogo from '../assets/logo.png'
-import walureLogo from '../assets/powered.png'
+import walureLogo from '../assets/poweredBy.png'
 
 const email = ref('')
 const statusMessage = ref('')
