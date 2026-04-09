@@ -295,30 +295,30 @@ const updateScrollState = () => {
   const el = scrollContainer.value
   if (!el) return
   isAtStart.value = el.scrollLeft <= 0
-  isAtEnd.value = el.scrollLeft + el.clientWidth >= el.scrollWidth - 1
+  isAtEnd.value = el.scrollLeft + el.clientWidth >= el.scrollWidth - 5
 }
 
 const scrollLeft = () => {
   const el = scrollContainer.value
   if (!el) return
-  el.scrollBy({ left: -(el.clientWidth * 0.75), behavior: 'smooth' })
+  el.scrollBy({ left: -el.clientWidth, behavior: "smooth" })
   setTimeout(updateScrollState, 400)
 }
 
 const scrollRight = () => {
   const el = scrollContainer.value
   if (!el) return
-  el.scrollBy({ left: el.clientWidth * 0.75, behavior: 'smooth' })
+  el.scrollBy({ left: el.clientWidth, behavior: "smooth" })
   setTimeout(updateScrollState, 400)
 }
 
 onMounted(() => {
   updateScrollState()
-  window.addEventListener('resize', updateScrollState)
+  window.addEventListener("resize", updateScrollState)
 })
 
 onBeforeUnmount(() => {
-  window.removeEventListener('resize', updateScrollState)
+  window.removeEventListener("resize", updateScrollState)
 })
 
 const programs = [
