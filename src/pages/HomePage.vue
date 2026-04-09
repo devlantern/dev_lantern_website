@@ -88,16 +88,35 @@
 
       <div
         ref="scrollContainer"
-        class="flex items-center gap-10 overflow-x-auto scroll-smooth scrollbar-hide flex-1 py-2"
+        class="flex items-center gap-10 overflow-x-auto scroll-smooth scrollbar-hide flex-1 py-2 snap-x snap-mandatory sm:snap-none  px-6"
         style="scroll-behavior: smooth;"
         @scroll="updateScrollState"
       >
         <div class="flex items-center gap-10 mx-auto">
-          <img src="../assets/hub.png"              alt="Hub"         class="flex-shrink-0  w-auto grayscale hover:grayscale-0" />
-          <img src="../assets/walure-logo.png"      alt="Walure"      class="flex-shrink-0  w-auto grayscale hover:grayscale-0" />
-          <img src="../assets/cardify.png"          alt="Cardify"     class="flex-shrink-0  w-auto grayscale hover:grayscale-0" />
-          <img src="../assets/axiom.png"            alt="Axiom"       class="flex-shrink-0  w-auto grayscale hover:grayscale-0" />
-          <img src="../assets/Smart-Learn-logo.png" alt="Smart Learn" class="flex-shrink-0  w-auto grayscale hover:grayscale-0" />
+          <div class="snap-center shrink-0 w-[220px] flex justify-center sm:w-auto">
+            <img src="../assets/hub.png" alt="Hub"
+              class="w-auto grayscale hover:grayscale-0" />
+          </div>
+
+          <div class="snap-center shrink-0 w-[180px] flex justify-center sm:w-auto">
+            <img src="../assets/walure-logo.png" alt="Walure"
+              class="w-auto grayscale hover:grayscale-0" />
+          </div>
+
+          <div class="snap-center shrink-0 w-[180px] flex justify-center sm:w-auto">
+            <img src="../assets/cardify.png" alt="Cardify"
+              class="w-auto grayscale hover:grayscale-0" />
+          </div>
+
+          <div class="snap-center shrink-0 w-[180px] flex justify-center sm:w-auto">
+            <img src="../assets/axiom.png" alt="Axiom"
+              class="w-auto grayscale hover:grayscale-0" />
+          </div>
+
+          <div class="snap-center shrink-0 w-[220px] flex justify-center sm:w-auto">
+            <img src="../assets/Smart-Learn-logo.png" alt="Smart Learn"
+              class="w-auto grayscale hover:grayscale-0" />
+          </div>
         </div>
       </div>
 
