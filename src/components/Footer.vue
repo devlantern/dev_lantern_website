@@ -96,7 +96,7 @@
       <div class="border-t border-[#c5cae9]" />
 
       <!--  Copyright  -->
-      <div class="mt-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div class="mt-5 flex flex-col sm:flex-row  sm:items-center items-start justify-between gap-3">
         <p class="text-sm text-[#3949ab]">
           © {{ copyrightYear }}, All Rights Reserved
           <span class="mx-1">|</span>
@@ -105,7 +105,7 @@
           <a href="#" class="hover:text-[#1a237e]">Terms and Condition</a>
         </p>
 
-        <img :src="walureLogo" alt="Powered by Walure" class="h-12 w-auto object-contain" />
+        <img :src="walureLogo" alt="Powered by Walure" class="h-12 w-auto object-contain self-start sm:self-auto" />
       </div>
 
     </div>
