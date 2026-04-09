@@ -93,27 +93,27 @@
         @scroll="updateScrollState"
       >
         <div class="flex items-center gap-10 mx-auto">
-          <div class="snap-center shrink-0 w-[220px] flex justify-center sm:w-auto">
+          <div class="snap-item snap-center shrink-0 w-full flex justify-center sm:w-auto">
             <img src="../assets/hub.png" alt="Hub"
               class="w-auto grayscale hover:grayscale-0" />
           </div>
 
-          <div class="snap-center shrink-0 w-[180px] flex justify-center sm:w-auto">
+          <div class="snap-item snap-center shrink-0 w-full flex justify-center sm:w-auto">
             <img src="../assets/walure-logo.png" alt="Walure"
               class="w-auto grayscale hover:grayscale-0" />
           </div>
 
-          <div class="snap-center shrink-0 w-[180px] flex justify-center sm:w-auto">
+          <div class="snap-item snap-center shrink-0 w-full flex justify-center sm:w-auto">
             <img src="../assets/cardify.png" alt="Cardify"
               class="w-auto grayscale hover:grayscale-0" />
           </div>
 
-          <div class="snap-center shrink-0 w-[180px] flex justify-center sm:w-auto">
+          <div class="snap-item snap-center shrink-0 w-full flex justify-center sm:w-auto">
             <img src="../assets/axiom.png" alt="Axiom"
               class="w-auto grayscale hover:grayscale-0" />
           </div>
 
-          <div class="snap-center shrink-0 w-[220px] flex justify-center sm:w-auto">
+          <div class="snap-item snap-center shrink-0 w-full flex justify-center sm:w-auto">
             <img src="../assets/Smart-Learn-logo.png" alt="Smart Learn"
               class="w-auto grayscale hover:grayscale-0" />
           </div>
@@ -294,21 +294,34 @@ const isAtEnd = ref(false)
 const updateScrollState = () => {
   const el = scrollContainer.value
   if (!el) return
+
   isAtStart.value = el.scrollLeft <= 0
   isAtEnd.value = el.scrollLeft + el.clientWidth >= el.scrollWidth - 5
+}
+
+const getScrollAmount = () => {
+  const el = scrollContainer.value
+  if (!el) return 0
+
+  const firstItem = /** @type {HTMLElement|null} */ (el.querySelector(".snap-item"))
+  if (!firstItem) return el.clientWidth * 0.75
+
+  return firstItem.offsetWidth
 }
 
 const scrollLeft = () => {
   const el = scrollContainer.value
   if (!el) return
-  el.scrollBy({ left: -el.clientWidth, behavior: "smooth" })
+
+  el.scrollBy({ left: -getScrollAmount(), behavior: "smooth" })
   setTimeout(updateScrollState, 400)
 }
 
 const scrollRight = () => {
   const el = scrollContainer.value
   if (!el) return
-  el.scrollBy({ left: el.clientWidth, behavior: "smooth" })
+
+  el.scrollBy({ left: getScrollAmount(), behavior: "smooth" })
   setTimeout(updateScrollState, 400)
 }
 
