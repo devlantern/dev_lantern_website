@@ -68,12 +68,12 @@
 
     <!-- CTA Button -->
     <div class="hidden md:block">
-      <RouterLink
-        to="/dev-matrix"
-        class="bg-[#1a237e] text-white text-sm font-medium px-5 py-2.5 rounded-md hover:bg-[#283593] transition-colors duration-200"
-      >
-        Apply Now
-      </RouterLink>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScExMcVwvdLVk2wTN5dpJ7t0KPesYB0QP1iBDg7FifPX_X2cQ/viewform?usp=publish-editor" target="_blank"
+            
+           class="bg-[#1a237e] text-white text-sm font-medium px-5 py-2.5 rounded-md hover:bg-[#283593] transition-colors duration-200"
+          >
+            Apply Now
+        </a>
     </div>
 
     <!-- Mobile Hamburger -->
