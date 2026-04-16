@@ -122,13 +122,13 @@
         <RouterLink to="/community" class="block py-1 hover:text-blue-700" @click="isMenuOpen = false">Community</RouterLink>
         <RouterLink to="/contact" class="block py-1 hover:text-blue-700" @click="isMenuOpen = false">Contact</RouterLink>
 
-        <RouterLink
-          to="/dev-matrix"
-          class="block mt-2 bg-[#1a237e] text-white text-center px-4 py-2.5 rounded-md hover:bg-[#283593] transition-colors"
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScExMcVwvdLVk2wTN5dpJ7t0KPesYB0QP1iBDg7FifPX_X2cQ/viewform?usp=publish-editor" target="_blank"
+            
+            class="block mt-2 bg-[#1a237e] text-white text-center px-4 py-2.5 rounded-md hover:bg-[#283593] transition-colors"
           @click="isMenuOpen = false"
-        >
-          Apply Now
-        </RouterLink>
+          >
+            Apply Now
+        </a>
       </div>
     </transition>
   </nav>
