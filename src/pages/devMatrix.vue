@@ -1,7 +1,7 @@
 <template>
   <div class="w-full font-sans bg-[#eef2f8] text-[#1a1a2e]">
 
-    <section class="relative w-full min-h-[520px] flex items-center justify-center overflow-hidden">
+    <section class="relative w-full min-h-[520px] flex items-center justify-center overflow-hidden font-sans">
 
       <div
         class="absolute inset-0 bg-[#0d1266] bg-cover bg-center"
