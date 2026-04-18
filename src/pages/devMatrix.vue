@@ -208,7 +208,7 @@ export default {
           stepColor: "text-[#1a2f7a]",
           titleColor: "text-[#1a2f7a]",
           textColor: "text-gray-600",
-          title: "Submit",
+          title: "Apply",
           description: "Submit your application via the form provided.",
         },
         {
