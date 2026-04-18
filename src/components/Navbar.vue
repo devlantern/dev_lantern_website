@@ -1,5 +1,5 @@
 <template>
-  <nav class="bg-gray-100 px-6 md:px-10 py-4 flex items-center justify-between relative">
+  <nav class="bg-gray-100 px-6 md:px-10 py-4 flex items-center justify-between relative font-sans">
     <!-- Logo -->
     <div class="flex items-center">
       <RouterLink to="/">

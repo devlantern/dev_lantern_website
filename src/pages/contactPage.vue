@@ -1,6 +1,6 @@
 
 <template>
-  <div class="relative">
+  <div class="relative font-sans">
     <div class="relative w-full h-[520px] overflow-hidden">
       <div
         class="absolute inset-0 bg-[#0d1266] bg-cover bg-center"

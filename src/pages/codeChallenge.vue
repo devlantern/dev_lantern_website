@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="relative w-full min-h-[520px] flex items-center justify-center overflow-hidden">
+    <section class="relative w-full min-h-[520px] flex items-center justify-center overflow-hidden font-sans">
 
       <div
         class="absolute inset-0 bg-[#0d1266] bg-cover bg-center"
@@ -43,12 +43,12 @@
     />
 
 
-    <img
+    <!-- <img
       src="../assets/latern-logo.png"
       alt="Dev Lantern"
       aria-hidden="true"
       class="absolute bottom-4 right-14 h-10"
-    />
+    /> -->
 
   </div>
         </div>

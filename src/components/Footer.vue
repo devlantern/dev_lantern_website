@@ -1,6 +1,6 @@
 <template>
   <!-- Newsletter Banner -->
-  <div class="bg-white border-b border-gray-200 py-8">
+  <div class="bg-white border-b border-gray-200 py-8 font-sans">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
       <div>
         <h4 class="text-[#1a237e] font-semibold text-lg">Join our newsletter</h4>
