@@ -59,7 +59,7 @@
           <ul class="space-y-2.5 text-sm text-[#3949ab] mb-6">
             <li><RouterLink to="/dev-matrix" target="blank" class="hover:text-[#1a237e]">Dev Matrix</RouterLink></li>
             <li><RouterLink to="/programs/podcast" target="blank" class="hover:text-[#1a237e]">Dev Podcast</RouterLink></li>
-            <li><RouterLink to="/programs/code-challenge" target="blank" class="hover:text-[#1a237e]">Code Challenge</RouterLink></li>
+            <li><RouterLink to="/programs/dev-challenge" target="blank" class="hover:text-[#1a237e]">Dev Challenge</RouterLink></li>
           </ul>
 
           <!-- Social Icons -->

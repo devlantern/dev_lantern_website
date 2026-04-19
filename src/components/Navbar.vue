@@ -49,10 +49,10 @@
             </li>
             <li>
               <RouterLink
-                to="/programs/code-challenge"
+                to="/programs/dev-challenge"
                 class="block px-4 py-2 text-sm hover:bg-gray-50 hover:text-blue-700"
                 @click="isProgramOpen = false"
-              >Code Challenge</RouterLink>
+              >Dev Challenge</RouterLink>
             </li>
           </ul>
         </transition>
@@ -114,7 +114,7 @@
             <div v-if="isMobileProgramOpen" class="pl-4 mt-1 space-y-2 text-sm">
               <RouterLink to="/dev-matrix" class="block py-1 hover:text-blue-700" @click="isMenuOpen = false">Dev Matrix</RouterLink>
               <RouterLink to="/programs/podcast" class="block py-1 hover:text-blue-700" @click="isMenuOpen = false"> Dev Podcast</RouterLink>
-              <RouterLink to="/programs/code-challenge" class="block py-1 hover:text-blue-700" @click="isMenuOpen = false">Code Challenge</RouterLink>
+              <RouterLink to="/programs/code-challenge" class="block py-1 hover:text-blue-700" @click="isMenuOpen = false">Dev Challenge</RouterLink>
             </div>
           </transition>
         </div>
