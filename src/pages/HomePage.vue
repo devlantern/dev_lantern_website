@@ -94,7 +94,7 @@
       >
         <div class="flex items-center gap-10 mx-auto">
           <div class="snap-item snap-center shrink-0 w-full flex justify-center sm:w-auto">
-            <img src="../assets/hub.png" alt="Hub"
+            <img src="../assets/talenvo.png" alt="Talenvo"
               class="w-auto grayscale hover:grayscale-0" />
           </div>
 
