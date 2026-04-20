@@ -206,7 +206,7 @@
       />
     </div>
 
-      <div class="max-w-6xl mx-auto">
+      <div class="max-w-6xl mx-auto" style="user-select: text !important;" >
         <h2 class="text-5xl md:text-5xl lg:text-7xl font-bold text-[#6E6E6E] mb-12">
           What We're <span class="text-[#000000]">Up To</span>
         </h2>
@@ -240,7 +240,7 @@
         </div>
 
 
-        <div class="rounded-2xl overflow-hidden relative shadow-md">
+        <div class="rounded-2xl overflow-hidden relative shadow-md" style="user-select: text !important;">
   <img
     src="../assets/dev-latern.jpg"
     alt="Dev Lantern Podcast"
