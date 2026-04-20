@@ -8,19 +8,19 @@
     </div>
 
     <!-- Desktop Nav -->
-    <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-[#7585B9]">
+    <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-[#1a237e]">
       <li>
-        <RouterLink to="/" class="hover:text-blue-700" active-class="font-semibold text-[#243E90]">Home</RouterLink>
+        <RouterLink to="/" class="hover:text-blue-700" active-class="font-bold text-[#243E90]">Home</RouterLink>
       </li>
       <li>
-        <RouterLink to="/about" class="hover:text-blue-700" active-class="font-semibold text-[#243E90]">About</RouterLink>
+        <RouterLink to="/about" class="hover:text-blue-700" active-class="font-bold text-[#243E90]">About</RouterLink>
       </li>
 
       <!-- Program Dropdown -->
       <li class="relative" @mouseenter="isProgramOpen = true" @mouseleave="isProgramOpen = false">
         <button
-        class="flex items-center gap-1 hover:text-blue-700 font-semibold focus:outline-none"
-        :class="isProgramActive ? 'text-[#243E90]' : 'text-[#7585B9]'"
+        class="flex items-center gap-1 hover:text-blue-700 focus:outline-none"
+        :class="isProgramActive ? 'text-[#243E90] font-bold' : 'text-[#1a237e]'"
 >
           Program
           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform duration-200" :class="{ 'rotate-180': isProgramOpen }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -59,10 +59,10 @@
       </li>
 
       <li>
-        <RouterLink to="/community" class="hover:text-blue-700" active-class="font-semibold text-[#243E90]">Community</RouterLink>
+        <RouterLink to="/community" class="hover:text-blue-700" active-class="font-bold text-[#243E90]">Community</RouterLink>
       </li>
       <li>
-        <RouterLink to="/contact" class="hover:text-blue-700" active-class="font-semibold text-[#243E90]">Contact</RouterLink>
+        <RouterLink to="/contact" class="hover:text-blue-700" active-class="font-bold text-[#243E90]">Contact</RouterLink>
       </li>
     </ul>
 
