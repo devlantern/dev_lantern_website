@@ -93,13 +93,13 @@
               </div>
 
               <div class="absolute bottom-3 right-3 flex items-center gap-1.5 opacity-90">
-                <img
+                <!-- <img
                   v-if="logoImage"
                   :src="logoImage"
                   alt="Dev Lantern"
                   class="h-7 object-contain"
                 />
-                <span v-else class="text-white text-[10px] font-bold tracking-widest uppercase">Dev Lantern</span>
+                <span v-else class="text-white text-[10px] font-bold tracking-widest uppercase">Dev Lantern</span> -->
               </div>
             </template>
 
@@ -279,7 +279,7 @@ export default {
 
       heroImage:        "/bg-3 1.png",
       podcastThumbnail: "/devpod.png",
-      logoImage:        "/dev-logo.png",
+      // logoImage:        "/dev-logo.png",
       guestSectionBg:   "/bg-3 1.png",
       guestImage1:      "/guest1.png",
       guestImage2:      "/guest2.png",

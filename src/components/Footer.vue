@@ -1,6 +1,6 @@
 <template>
   <!-- Newsletter Banner -->
-  <div class="bg-white border-b border-gray-200 py-8">
+  <div class="bg-white border-b border-gray-200 py-8 font-sans">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
       <div>
         <h4 class="text-[#1a237e] font-semibold text-lg">Join our newsletter</h4>
@@ -59,7 +59,7 @@
           <ul class="space-y-2.5 text-sm text-[#3949ab] mb-6">
             <li><RouterLink to="/dev-matrix" target="blank" class="hover:text-[#1a237e]">Dev Matrix</RouterLink></li>
             <li><RouterLink to="/programs/podcast" target="blank" class="hover:text-[#1a237e]">Dev Podcast</RouterLink></li>
-            <li><RouterLink to="/programs/code-challenge" target="blank" class="hover:text-[#1a237e]">Code Challenge</RouterLink></li>
+            <li><RouterLink to="/programs/dev-challenge" target="blank" class="hover:text-[#1a237e]">Dev Challenge</RouterLink></li>
           </ul>
 
           <!-- Social Icons -->
@@ -96,7 +96,7 @@
       <div class="border-t border-[#c5cae9]" />
 
       <!--  Copyright  -->
-      <div class="mt-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div class="mt-5 flex flex-col sm:flex-row  sm:items-center items-start justify-between gap-3">
         <p class="text-sm text-[#3949ab]">
           © {{ copyrightYear }}, All Rights Reserved
           <span class="mx-1">|</span>
@@ -105,7 +105,7 @@
           <a href="#" class="hover:text-[#1a237e]">Terms and Condition</a>
         </p>
 
-        <img :src="walureLogo" alt="Powered by Walure" class="h-12 w-auto object-contain" />
+        <img :src="walureLogo" alt="Powered by Walure" class="h-12 w-auto object-contain self-start sm:self-auto" />
       </div>
 
     </div>
@@ -115,7 +115,7 @@
 <script setup>
 import { ref } from 'vue'
 import footerLogo from '../assets/logo.png'
-import walureLogo from '../assets/walure-logo.png'
+import walureLogo from '../assets/poweredBy.png'
 
 const email = ref('')
 const statusMessage = ref('')

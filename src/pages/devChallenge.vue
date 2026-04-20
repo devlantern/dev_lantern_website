@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="relative w-full min-h-[520px] flex items-center justify-center overflow-hidden">
+    <section class="relative w-full min-h-[520px] flex items-center justify-center overflow-hidden font-sans">
 
       <div
         class="absolute inset-0 bg-[#0d1266] bg-cover bg-center"
@@ -11,7 +11,7 @@
 
       <div class="relative text-center px-6 py-20 max-w-5xl mx-auto">
         <h1 class="text-3xl sm:text-4xl md:text-7xl font-medium text-white">
-          Code <span class="text-[#c9a227]">Challenge</span>
+          Dev <span class="text-[#c9a227]">Challenge</span>
         </h1>
       </div>
     </section >
@@ -19,8 +19,8 @@
     <section class="bg-[#F5F8FF]  py-24  ">
 
         <div class="max-w-6xl mx-auto pb-12 px-8">
-            <h2 class="text-3xl md:text-4xl lg:text-5xl text-[#1F357A] font-medium">Code Challenge</h2>
-            <p class="text-base md:text-xl text-[#525252] pt-12">In August 2025, we launched the Dev Lantern Code Challenge to push learning beyond theory and into execution. Designed as a hands-on, problem-solving initiative, the Code Challenge encourages collaboration, strenghtens technical competence, and identifies emerging talent with the community. Dev Lantern, in collaboration with Talenvo is where theory meets execution. We host hands-on competitions and real-world problem-solving sessions that push participants beyond comfortcand into mastery, strenghtening practical skills, encouraging collaboration, and spotlight emerging talent. This is where builders prove what they know.</p>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl text-[#1F357A] font-medium">Dev Challenge</h2>
+            <p class="text-base md:text-xl text-[#525252] pt-12">In August 2025, we launched the Dev Lantern Challenge to push learning beyond theory and into execution. Designed as a hands-on, problem-solving initiative, the Code Challenge encourages collaboration, strenghtens technical competence, and identifies emerging talent with the community. Dev Lantern, in collaboration with Talenvo is where theory meets execution. We host hands-on competitions and real-world problem-solving sessions that push participants beyond comfortcand into mastery, strenghtening practical skills, encouraging collaboration, and spotlight emerging talent. This is where builders prove what they know.</p>
         </div>
 
         <div class="max-w-6xl mx-auto bg-white p-4 ">
@@ -37,18 +37,18 @@
         </div>
         <div class="relative w-full my-6 rounded-xl overflow-hidden">
     <img
-      src="../assets/codeImg.png"
+      src="/codeimg.png"
       alt="Code challenge session"
-      class="w-full h-[400px] md:h-[500px] object-cover px-4"
+      class="w-full h-full md:h-full object-cover px-4"
     />
 
 
-    <img
+    <!-- <img
       src="../assets/latern-logo.png"
       alt="Dev Lantern"
       aria-hidden="true"
       class="absolute bottom-4 right-14 h-10"
-    />
+    /> -->
 
   </div>
         </div>

@@ -1,7 +1,7 @@
 <template>
   <div class="w-full font-sans bg-[#eef2f8] text-[#1a1a2e]">
 
-    <section class="relative w-full min-h-[520px] flex items-center justify-center overflow-hidden">
+    <section class="relative w-full min-h-[520px] flex items-center justify-center overflow-hidden font-sans">
 
       <div
         class="absolute inset-0 bg-[#0d1266] bg-cover bg-center"
@@ -158,16 +158,6 @@
           </div>
         </div>
 
-        <!-- Squiggle -->
-        <div class="flex justify-end mt-6 pr-2">
-          <img
-            v-if="squiggleImage"
-            :src="squiggleImage"
-            alt=""
-            aria-hidden="true"
-            class="w-[90px] sm:w-[120px] h-auto object-contain block"
-          />
-        </div>
          <!-- CTA Button -->
         <div class="mt-10 flex justify-center ">
           <a href="https://docs.google.com/forms/d/e/1FAIpQLScExMcVwvdLVk2wTN5dpJ7t0KPesYB0QP1iBDg7FifPX_X2cQ/viewform?usp=publish-editor" target="_blank"
@@ -198,15 +188,17 @@ export default {
         { id: 3, label: "Backend Development" },
         { id: 4, label: "Product Design" },
         { id: 5, label: "Product Management" },
+        { id: 6, label: "Software Quality Assurance" },
       ],
 
       // Map track id 
       trackImages: {
         1: "/track1.png",
         2: "/frontendDev.png",
-        3: "/BackendDev.png",
-        4: "/productDesign.png",
-        5: "/ProductManag.png",
+        3: "/backendimg.png",
+        4: "/productimg.png",
+        5: "/productManagement.png",
+        6: "/qa.png",
       },
 
 
@@ -216,7 +208,7 @@ export default {
           stepColor: "text-[#1a2f7a]",
           titleColor: "text-[#1a2f7a]",
           textColor: "text-gray-600",
-          title: "Submit",
+          title: "Apply",
           description: "Submit your application via the form provided.",
         },
         {
@@ -250,7 +242,6 @@ export default {
       heroImage:        "/bg-3 1.png",
       appSectionBg:     "/bg-3 1.png",
       eligibilityImage: "/application.png",
-      squiggleImage:    "/vector.png",
     };
   },
 };

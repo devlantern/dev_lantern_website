@@ -72,46 +72,66 @@
   
 
   <section class="bg-[#E9ECF4] py-10 px-6">
-  <p class="text-center text-base text-[#667085] uppercase tracking-widest mb-6 font-medium">Our Partners</p>
+    <p class="text-center text-base text-[#667085] uppercase tracking-widest mb-6 font-medium">Our Partners</p>
 
-  <div class="relative flex items-center max-w-6xl mx-auto gap-3">
+    <div class="relative flex items-center max-w-6xl mx-auto">
 
-    <button
-      @click="scrollLeft"
-      class="flex-shrink-0 hover:opacity-70 transition-opacity disabled:opacity-30"
-      :disabled="isAtStart"
-    >
-      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M13.75 21.25L7.5 15L13.75 8.75M22.5 21.25L16.25 15L22.5 8.75" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </button>
+      <button
+        @click="scrollLeft"
+        class="flex-shrink-0 z-10 hover:opacity-70 transition-opacity disabled:opacity-30 px-2"
+        :disabled="isAtStart"
+      >
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.75 21.25L7.5 15L13.75 8.75M22.5 21.25L16.25 15L22.5 8.75" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
 
+      <div
+        ref="scrollContainer"
+        class="flex items-center gap-10 overflow-x-auto scroll-smooth scrollbar-hide flex-1 py-2 snap-x snap-mandatory sm:snap-none  px-6"
+        style="scroll-behavior: smooth;"
+        @scroll="updateScrollState"
+      >
+        <div class="flex items-center gap-10 mx-auto">
+          <div class="snap-item snap-center shrink-0 w-full flex justify-center sm:w-auto">
+            <img src="../assets/talenvo.png" alt="Talenvo"
+              class="w-auto grayscale hover:grayscale-0" />
+          </div>
 
-    <div
-      ref="scrollContainer"
-      class="flex items-center gap-10 overflow-x-auto scroll-smooth scrollbar-hide flex-1"
-      @scroll="updateScrollState"
-    >
-      <img src="../assets/hub.png"              alt="Hub"        class="grayscale hover:grayscale-0" />
-      <img src="../assets/walure-logo.png"      alt="Walure"     class="grayscale hover:grayscale-0" />
-      <img src="../assets/cardify.png"          alt="Cardify"    class="grayscale hover:grayscale-0" />
-      <img src="../assets/axiom.png"            alt="Axiom"      class="grayscale hover:grayscale-0" />
-      <img src="../assets/Smart-Learn-logo.png" alt="Smart Learn" class="grayscale hover:grayscale-0" />
+          <div class="snap-item snap-center shrink-0 w-full flex justify-center sm:w-auto">
+            <img src="../assets/walure-logo.png" alt="Walure"
+              class="w-auto grayscale hover:grayscale-0" />
+          </div>
+
+          <div class="snap-item snap-center shrink-0 w-full flex justify-center sm:w-auto">
+            <img src="../assets/cardify.png" alt="Cardify"
+              class="w-auto grayscale hover:grayscale-0" />
+          </div>
+
+          <div class="snap-item snap-center shrink-0 w-full flex justify-center sm:w-auto">
+            <img src="../assets/axiom.png" alt="Axiom"
+              class="w-auto grayscale hover:grayscale-0" />
+          </div>
+
+          <div class="snap-item snap-center shrink-0 w-full flex justify-center sm:w-auto">
+            <img src="../assets/Smart-Learn-logo.png" alt="Smart Learn"
+              class="w-auto grayscale hover:grayscale-0" />
+          </div>
+        </div>
+      </div>
+
+      <button
+        @click="scrollRight"
+        class="flex-shrink-0 z-10 hover:opacity-70 transition-opacity disabled:opacity-30 px-2"
+        :disabled="isAtEnd"
+      >
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16.25 21.25L22.5 15L16.25 8.75M7.5 21.25L13.75 15L7.5 8.75" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+
     </div>
-
-    <button
-      @click="scrollRight"
-      class="flex-shrink-0 hover:opacity-70 transition-opacity disabled:opacity-30"
-      :disabled="isAtEnd"
-    >
-      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M16.25 21.25L22.5 15L16.25 8.75M7.5 21.25L13.75 15L7.5 8.75" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-    </button>
-
-  </div>
-</section>
-
+  </section>
     
     <section class="bg-white py-20 px-6">
       <div class="max-w-6xl mx-auto">
@@ -206,7 +226,7 @@
       />
     </div>
 
-      <div class="max-w-6xl mx-auto" style="user-select: text !important;" >
+      <div class="max-w-6xl mx-auto" style="user-select: text !important;">
         <h2 class="text-5xl md:text-5xl lg:text-7xl font-bold text-[#6E6E6E] mb-12">
           What We're <span class="text-[#000000]">Up To</span>
         </h2>
@@ -214,7 +234,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-12">
           <!-- Left: description -->
           <div>
-            <p class="text-[#525252] text-lg md:text-2xl mb-16">
+            <p class="text-[#525252] text-lg select-text md:text-2xl mb-16">
               DevMatrix is Dev Lantern's free structured bootcamp designed to equip aspiring and growing tech professionals with practical, in-demand skills.
             </p>
             <p class="text-[#525252] text-lg md:text-2xl">
@@ -223,14 +243,19 @@
           </div>
 
           <!-- Right: cohort list -->
-          <div class="bg-[#232323] rounded-2xl p-6 border border-gray-100">
+          <div class="bg-[#232323] rounded-2xl p-3 border border-gray-100 ">
             <p class="text-lg pb-2 font-semibold text-white uppercase tracking-wider border-b border-[#6E6E6E] mb-4">Our journey so far:</p>
             <ul class="space-y-3 text-[#BCBCBC]">
-              <li v-for="cohort in cohorts" :key="cohort"
+              <li v-for="(cohort, index) in cohorts" :key="cohort"
                 class="flex items-center gap-3 text-lg md:text-2xl py-2 font-medium">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="24" height="24" rx="12" fill="#F0EAF4"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.096 7.39004L9.93602 14.3L8.03602 12.27C7.68602 11.94 7.13602 11.92 6.73602 12.2C6.34602 12.49 6.23602 13 6.47602 13.41L8.72602 17.07C8.94602 17.41 9.32601 17.62 9.75601 17.62C10.166 17.62 10.556 17.41 10.776 17.07C11.136 16.6 18.006 8.41004 18.006 8.41004C18.906 7.49004 17.816 6.68004 17.096 7.38004V7.39004Z" fill="#9872B5"/>
+                <svg class="shrink-0"
+                  width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <rect width="24" height="24" rx="12"
+                    :fill="index === 0 ? '#0066FF' : index === 1 ? '#FFD700' : '#F0EAF4'" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M17.096 7.39004L9.93602 14.3L8.03602 12.27C7.68602 11.94 7.13602 11.92 6.73602 12.2C6.34602 12.49 6.23602 13 6.47602 13.41L8.72602 17.07C8.94602 17.41 9.32601 17.62 9.75601 17.62C10.166 17.62 10.556 17.41 10.776 17.07C11.136 16.6 18.006 8.41004 18.006 8.41004C18.906 7.49004 17.816 6.68004 17.096 7.38004V7.39004Z"
+                    fill="#9872B5"/>
                 </svg>
 
                 {{ cohort }}
@@ -247,9 +272,9 @@
     class="w-full h-56 sm:h-72 md:h-96 lg:h-120 object-cover"
   />
   <div class="absolute bottom-0 left-0 right-0 bg-white/30 backdrop-blur-[24px] px-3 sm:px-8 py-2 sm:py-6">
-    <p class="text-white text-sm sm:text-base md:text-2xl lg:text-3xl text-center leading-relaxed">
+    <h2 class="text-white text-sm sm:text-base md:text-2xl lg:text-3xl select-text text-center leading-relaxed">
       Each cohort is intentionally curated to meet the evolving needs of tech ecosystem, bridging the gap between learning and employability.
-    </p>
+    </h2>
   </div>
 </div>
 
@@ -260,27 +285,54 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 
 const scrollContainer = ref(null)
 const isAtStart = ref(true)
 const isAtEnd = ref(false)
 
+const updateScrollState = () => {
+  const el = scrollContainer.value
+  if (!el) return
+
+  isAtStart.value = el.scrollLeft <= 0
+  isAtEnd.value = el.scrollLeft + el.clientWidth >= el.scrollWidth - 5
+}
+
+const getScrollAmount = () => {
+  const el = scrollContainer.value
+  if (!el) return 0
+
+  const firstItem = /** @type {HTMLElement|null} */ (el.querySelector(".snap-item"))
+  if (!firstItem) return el.clientWidth * 0.75
+
+  return firstItem.offsetWidth
+}
+
 const scrollLeft = () => {
-  scrollContainer.value.scrollBy({ left: -200, behavior: 'smooth' })
+  const el = scrollContainer.value
+  if (!el) return
+
+  el.scrollBy({ left: -getScrollAmount(), behavior: "smooth" })
+  setTimeout(updateScrollState, 400)
 }
 
 const scrollRight = () => {
-  scrollContainer.value.scrollBy({ left: 200, behavior: 'smooth' })
-}
-
-const updateScrollState = () => {
   const el = scrollContainer.value
-  isAtStart.value = el.scrollLeft <= 0
-  isAtEnd.value = el.scrollLeft + el.clientWidth >= el.scrollWidth - 1
+  if (!el) return
+
+  el.scrollBy({ left: getScrollAmount(), behavior: "smooth" })
+  setTimeout(updateScrollState, 400)
 }
 
-onMounted(() => updateScrollState())
+onMounted(() => {
+  updateScrollState()
+  window.addEventListener("resize", updateScrollState)
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener("resize", updateScrollState)
+})
 
 const programs = [
   {
@@ -292,7 +344,7 @@ const programs = [
   },
   {
     title: 'Dev Matrix',
-    description: 'In April 2025, we introduced Dev Matrix, our free, structured tech bootcamp designed to close the gap between learning and real-world application. The first cohort focused on Mobile Development, and in continuity is Frontend/Backend and Product Design / Management.',
+    description: 'In April 2025, we introduced Dev Matrix, our free, structured tech bootcamp designed to close the gap between learning and real-world application. The first cohort focused on Mobile Development, and in continuity is Frontend/Backend, Product Design / Management and Software Quality Assurance.',
     overlay: 'rgba(233, 236, 244, 1)', 
     textColor: 'text-[#4B61A4]', 
     link: './dev-matrix'
@@ -308,11 +360,11 @@ const programs = [
 
 const cohorts = [
   'Cohort 1: Mobile Development',
-  'Cohort 2: Frontend & Backend Engineering',
+  'Cohort 2: Backend Engineering & Software Quality Assurance',
   'Cohort 3: Product Design & Product Management',
+  'Cohort 4: Frontend Engineering',
 ]
 </script>
-
 
 <style scoped>
 .carousel-track {

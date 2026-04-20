@@ -15,9 +15,9 @@
         <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white leading-tight tracking-tight">
           About <span class="text-[#c9a227]">Dev Lantern</span>
         </h1>
-        <p class="mt-7 text-xl sm:text-base text-[#cdd5f0] leading-[1.85]">
+        <p class="mt-7 text-xl sm:text-base font-medium  text-[#cdd5f0] leading-[1.85]">
           Dev Lantern is a subsidiary of Walure Development Initiative, a
-          <a href="#" class="text-[#c9a227] font-medium hover:underline">non-governmental organization</a>
+          <a href="#" class="text-[#c9a227] hover:underline">non-governmental organization</a>
           committed to advancing sustainable development through education,
           empowerment, and capacity building.
         </p>

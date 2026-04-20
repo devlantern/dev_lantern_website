@@ -1,5 +1,5 @@
 <template>
-  <nav class="bg-gray-100 px-6 md:px-10 py-4 flex items-center justify-between relative">
+  <nav class="bg-gray-100 px-6 md:px-10 py-4 flex items-center justify-between relative font-sans">
     <!-- Logo -->
     <div class="flex items-center">
       <RouterLink to="/">
@@ -8,19 +8,19 @@
     </div>
 
     <!-- Desktop Nav -->
-    <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-[#7585B9]">
+    <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-[#1a237e]">
       <li>
-        <RouterLink to="/" class="hover:text-blue-700" active-class="font-semibold text-[#243E90]">Home</RouterLink>
+        <RouterLink to="/" class="hover:text-blue-700" active-class="font-bold text-[#243E90]">Home</RouterLink>
       </li>
       <li>
-        <RouterLink to="/about" class="hover:text-blue-700" active-class="font-semibold text-[#243E90]">About</RouterLink>
+        <RouterLink to="/about" class="hover:text-blue-700" active-class="font-bold text-[#243E90]">About</RouterLink>
       </li>
 
       <!-- Program Dropdown -->
       <li class="relative" @mouseenter="isProgramOpen = true" @mouseleave="isProgramOpen = false">
         <button
-        class="flex items-center gap-1 hover:text-blue-700 font-semibold focus:outline-none"
-        :class="isProgramActive ? 'text-[#243E90]' : 'text-[#7585B9]'"
+        class="flex items-center gap-1 hover:text-blue-700 focus:outline-none"
+        :class="isProgramActive ? 'text-[#243E90] font-bold' : 'text-[#1a237e]'"
 >
           Program
           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform duration-200" :class="{ 'rotate-180': isProgramOpen }" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -49,31 +49,31 @@
             </li>
             <li>
               <RouterLink
-                to="/programs/code-challenge"
+                to="/programs/dev-challenge"
                 class="block px-4 py-2 text-sm hover:bg-gray-50 hover:text-blue-700"
                 @click="isProgramOpen = false"
-              >Code Challenge</RouterLink>
+              >Dev Challenge</RouterLink>
             </li>
           </ul>
         </transition>
       </li>
 
       <li>
-        <RouterLink to="/community" class="hover:text-blue-700" active-class="font-semibold text-[#243E90]">Community</RouterLink>
+        <RouterLink to="/community" class="hover:text-blue-700" active-class="font-bold text-[#243E90]">Community</RouterLink>
       </li>
       <li>
-        <RouterLink to="/contact" class="hover:text-blue-700" active-class="font-semibold text-[#243E90]">Contact</RouterLink>
+        <RouterLink to="/contact" class="hover:text-blue-700" active-class="font-bold text-[#243E90]">Contact</RouterLink>
       </li>
     </ul>
 
     <!-- CTA Button -->
     <div class="hidden md:block">
-      <RouterLink
-        to="/dev-matrix"
-        class="bg-[#1a237e] text-white text-sm font-medium px-5 py-2.5 rounded-md hover:bg-[#283593] transition-colors duration-200"
-      >
-        Apply Now
-      </RouterLink>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScExMcVwvdLVk2wTN5dpJ7t0KPesYB0QP1iBDg7FifPX_X2cQ/viewform?usp=publish-editor" target="_blank"
+            
+           class="bg-[#1a237e] text-white text-sm font-medium px-5 py-2.5 rounded-md hover:bg-[#283593] transition-colors duration-200"
+          >
+            Apply Now
+        </a>
     </div>
 
     <!-- Mobile Hamburger -->
@@ -114,7 +114,7 @@
             <div v-if="isMobileProgramOpen" class="pl-4 mt-1 space-y-2 text-sm">
               <RouterLink to="/dev-matrix" class="block py-1 hover:text-blue-700" @click="isMenuOpen = false">Dev Matrix</RouterLink>
               <RouterLink to="/programs/podcast" class="block py-1 hover:text-blue-700" @click="isMenuOpen = false"> Dev Podcast</RouterLink>
-              <RouterLink to="/programs/code-challenge" class="block py-1 hover:text-blue-700" @click="isMenuOpen = false">Code Challenge</RouterLink>
+              <RouterLink to="/programs/code-challenge" class="block py-1 hover:text-blue-700" @click="isMenuOpen = false">Dev Challenge</RouterLink>
             </div>
           </transition>
         </div>
@@ -122,13 +122,13 @@
         <RouterLink to="/community" class="block py-1 hover:text-blue-700" @click="isMenuOpen = false">Community</RouterLink>
         <RouterLink to="/contact" class="block py-1 hover:text-blue-700" @click="isMenuOpen = false">Contact</RouterLink>
 
-        <RouterLink
-          to="/dev-matrix"
-          class="block mt-2 bg-[#1a237e] text-white text-center px-4 py-2.5 rounded-md hover:bg-[#283593] transition-colors"
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScExMcVwvdLVk2wTN5dpJ7t0KPesYB0QP1iBDg7FifPX_X2cQ/viewform?usp=publish-editor" target="_blank"
+            
+            class="block mt-2 bg-[#1a237e] text-white text-center px-4 py-2.5 rounded-md hover:bg-[#283593] transition-colors"
           @click="isMenuOpen = false"
-        >
-          Apply Now
-        </RouterLink>
+          >
+            Apply Now
+        </a>
       </div>
     </transition>
   </nav>
