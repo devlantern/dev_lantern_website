@@ -226,7 +226,7 @@
       />
     </div>
 
-      <div class="max-w-6xl mx-auto">
+      <div class="max-w-6xl mx-auto" style="user-select: text !important;">
         <h2 class="text-5xl md:text-5xl lg:text-7xl font-bold text-[#6E6E6E] mb-12">
           What We're <span class="text-[#000000]">Up To</span>
         </h2>
@@ -234,7 +234,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-12">
           <!-- Left: description -->
           <div>
-            <p class="text-[#525252] text-lg md:text-2xl mb-16">
+            <p class="text-[#525252] text-lg select-text md:text-2xl mb-16">
               DevMatrix is Dev Lantern's free structured bootcamp designed to equip aspiring and growing tech professionals with practical, in-demand skills.
             </p>
             <p class="text-[#525252] text-lg md:text-2xl">
@@ -272,9 +272,9 @@
     class="w-full h-56 sm:h-72 md:h-96 lg:h-120 object-cover"
   />
   <div class="absolute bottom-0 left-0 right-0 bg-white/30 backdrop-blur-[24px] px-3 sm:px-8 py-2 sm:py-6">
-    <p class="text-white text-sm sm:text-base md:text-2xl lg:text-3xl text-center leading-relaxed">
+    <h2 class="text-white text-sm sm:text-base md:text-2xl lg:text-3xl select-text text-center leading-relaxed">
       Each cohort is intentionally curated to meet the evolving needs of tech ecosystem, bridging the gap between learning and employability.
-    </p>
+    </h2>
   </div>
 </div>
 
