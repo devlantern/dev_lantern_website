@@ -213,7 +213,7 @@
 
     <section class="relative overflow-hidden bg-white pt-32 pb-24 px-6">
        <div
-        class="absolute inset-0 bg-cover bg-center z-50"
+        class="absolute inset-0 bg-cover bg-center z-0"
         style="background-image: url('/bg-2.png')"
       ></div>
 
@@ -225,60 +225,61 @@
         class=" lg:h-full"
       />
     </div>
+      <section class="max-w-6xl relative z-10 mx-auto" style="user-select: text !important;">
+        <div>
+          <h2 class="text-5xl md:text-5xl lg:text-7xl font-bold text-[#6E6E6E] mb-12">
+            What We're <span class="text-[#000000]">Up To</span>
+          </h2>
 
-      <div class="max-w-6xl mx-auto" style="user-select: text !important;">
-        <h2 class="text-5xl md:text-5xl lg:text-7xl font-bold text-[#6E6E6E] mb-12">
-          What We're <span class="text-[#000000]">Up To</span>
-        </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-12">
+            <!-- Left: description -->
+            <div>
+              <p class="text-[#525252] text-lg select-text md:text-2xl mb-16">
+                DevMatrix is Dev Lantern's free structured bootcamp designed to equip aspiring and growing tech professionals with practical, in-demand skills.
+              </p>
+              <p class="text-[#525252] text-lg md:text-2xl">
+                We guide participants through hands-on learning, mentorship, and real-world application.
+              </p>
+            </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-12">
-          <!-- Left: description -->
-          <div>
-            <p class="text-[#525252] text-lg select-text md:text-2xl mb-16">
-              DevMatrix is Dev Lantern's free structured bootcamp designed to equip aspiring and growing tech professionals with practical, in-demand skills.
-            </p>
-            <p class="text-[#525252] text-lg md:text-2xl">
-              We guide participants through hands-on learning, mentorship, and real-world application.
-            </p>
+            <!-- Right: cohort list -->
+            <div class="bg-[#232323] rounded-2xl p-3 border border-gray-100 ">
+              <p class="text-lg pb-2 font-semibold text-white uppercase tracking-wider border-b border-[#6E6E6E] mb-4">Our journey so far:</p>
+              <ul class="space-y-3 text-[#BCBCBC]">
+                <li v-for="(cohort, index) in cohorts" :key="cohort"
+                  class="flex items-center gap-3 text-lg md:text-2xl py-2 font-medium">
+                  <svg class="shrink-0"
+                    width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect width="24" height="24" rx="12"
+                      :fill="index === 0 ? '#0066FF' : index === 1 ? '#FFD700' : '#F0EAF4'" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M17.096 7.39004L9.93602 14.3L8.03602 12.27C7.68602 11.94 7.13602 11.92 6.73602 12.2C6.34602 12.49 6.23602 13 6.47602 13.41L8.72602 17.07C8.94602 17.41 9.32601 17.62 9.75601 17.62C10.166 17.62 10.556 17.41 10.776 17.07C11.136 16.6 18.006 8.41004 18.006 8.41004C18.906 7.49004 17.816 6.68004 17.096 7.38004V7.39004Z"
+                      fill="#9872B5"/>
+                  </svg>
+
+                  {{ cohort }}
+                </li>
+              </ul>
+            </div>
           </div>
 
-          <!-- Right: cohort list -->
-          <div class="bg-[#232323] rounded-2xl p-3 border border-gray-100 ">
-            <p class="text-lg pb-2 font-semibold text-white uppercase tracking-wider border-b border-[#6E6E6E] mb-4">Our journey so far:</p>
-            <ul class="space-y-3 text-[#BCBCBC]">
-              <li v-for="(cohort, index) in cohorts" :key="cohort"
-                class="flex items-center gap-3 text-lg md:text-2xl py-2 font-medium">
-                <svg class="shrink-0"
-                  width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <rect width="24" height="24" rx="12"
-                    :fill="index === 0 ? '#0066FF' : index === 1 ? '#FFD700' : '#F0EAF4'" />
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M17.096 7.39004L9.93602 14.3L8.03602 12.27C7.68602 11.94 7.13602 11.92 6.73602 12.2C6.34602 12.49 6.23602 13 6.47602 13.41L8.72602 17.07C8.94602 17.41 9.32601 17.62 9.75601 17.62C10.166 17.62 10.556 17.41 10.776 17.07C11.136 16.6 18.006 8.41004 18.006 8.41004C18.906 7.49004 17.816 6.68004 17.096 7.38004V7.39004Z"
-                    fill="#9872B5"/>
-                </svg>
 
-                {{ cohort }}
-              </li>
-            </ul>
-          </div>
-        </div>
-
-
-        <div class="rounded-2xl overflow-hidden relative shadow-md" style="user-select: text !important;">
-  <img
-    src="../assets/dev-latern.jpg"
-    alt="Dev Lantern Podcast"
-    class="w-full h-56 sm:h-72 md:h-96 lg:h-120 object-cover"
-  />
-  <div class="absolute bottom-0 left-0 right-0 bg-white/30 backdrop-blur-[24px] px-3 sm:px-8 py-2 sm:py-6">
-    <h2 class="text-white text-sm sm:text-base md:text-2xl lg:text-3xl select-text text-center leading-relaxed">
-      Each cohort is intentionally curated to meet the evolving needs of tech ecosystem, bridging the gap between learning and employability.
-    </h2>
+          <div class="rounded-2xl overflow-hidden relative shadow-md" style="user-select: text !important;">
+    <img
+      src="../assets/dev-latern.jpg"
+      alt="Dev Lantern Podcast"
+      class="w-full h-56 sm:h-72 md:h-96 lg:h-120 object-cover"
+    />
+    <div class="absolute bottom-0 left-0 right-0 bg-white/30 backdrop-blur-xl  px-3 sm:px-8 py-2 sm:py-6">
+      <h2 class="text-white text-sm sm:text-base md:text-2xl lg:text-3xl select-text text-center leading-relaxed">
+        Each cohort is intentionally curated to meet the evolving needs of tech ecosystem, bridging the gap between learning and employability.
+      </h2>
+    </div>
   </div>
-</div>
 
-      </div>
+        </div>
+      </section>
     </section>
 
   </div>
