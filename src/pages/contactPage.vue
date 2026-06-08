@@ -111,8 +111,7 @@
 <script setup>
 import { ref, reactive, onMounted } from 'vue'
 
-
-const siteKey = '6LdkzKIsAAAAAPcwD3aL6wuHUTxwTMXqIZ5ZcFFj' 
+const siteKey = '6LdkzKIsAAAAAPcwD3aL6wuHUTxwTMXqIZ5ZcFFj'
 const captchaToken = ref('')
 const captchaError = ref(false)
 
@@ -155,13 +154,16 @@ const statusMessage = ref('')
 const statusSuccess = ref(false)
 
 const onSubmit = async () => {
- if (!captchaToken.value) {
+  if (!captchaToken.value) {
     captchaError.value = true
     return
   }
+  isSubmitting.value = true  
+  statusMessage.value = ''
   try {
     const payload = {
       access_key: WEB3FORMS_ACCESS_KEY,
+      'g-recaptcha-response': captchaToken.value,  
       name: form.name,
       email: form.email,
       inquiry: form.inquiry,
@@ -180,7 +182,6 @@ const onSubmit = async () => {
     if (res.success) {
       statusSuccess.value = true
       statusMessage.value = res.message || 'Message sent successfully!'
-      // Reset form
       Object.assign(form, { name: '', email: '', inquiry: '', message: '' })
     } else {
       statusSuccess.value = false
@@ -190,7 +191,11 @@ const onSubmit = async () => {
     statusSuccess.value = false
     statusMessage.value = 'Network error. Please check your connection and try again.'
   } finally {
-    isSubmitting.value = false
+    isSubmitting.value = false  
+    captchaToken.value = ''   
+    if (window.grecaptcha) {
+      window.grecaptcha.reset()
+    }
   }
 }
 </script>
