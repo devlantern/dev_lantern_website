@@ -105,7 +105,7 @@
           <a href="#" class="hover:text-[#1a237e]">Terms and Condition</a>
         </p>
 
-        <img :src="walureLogo" alt="Powered by Walure" class="h-12 w-auto object-contain self-start sm:self-auto" />
+        <img :src="walureLogo" alt="Powered by Walure" class=" object-contain self-start sm:self-auto" />
       </div>
 
     </div>
