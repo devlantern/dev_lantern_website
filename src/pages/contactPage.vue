@@ -163,7 +163,7 @@ const onSubmit = async () => {
   try {
     const payload = {
       access_key: WEB3FORMS_ACCESS_KEY,
-      'g-recaptcha-response': captchaToken.value,  
+      // 'g-recaptcha-response': captchaToken.value,  
       name: form.name,
       email: form.email,
       inquiry: form.inquiry,
