@@ -352,10 +352,10 @@ const programs = [
   },
   {
     title: 'Code Challenge',
-    description: 'In August, we launched the Dev Lantern Code Challenge to push learning beyond theory and into execution. Designed as a hands-on, problem-solving initiative, the Code Challenge encourages collaboration, strengthens technical competence, and identifies emerging talent within the community.',
+    description: 'In August 2025, we launched the Dev Lantern Challenge to push learning beyond theory and into execution. Designed as a hands-on, problem-solving initiative, the Dev Challenge encourages collaboration, strengthens technical competence, and identifies emerging talent with the community.',
     overlay: 'rgba(20, 40, 110, 1)',
     textColor: 'text-[#CAD1E4]', 
-    link: './programs/code-challenge'  
+    link: './programs/dev-challenge'  
   },
 ]
 
