@@ -351,7 +351,7 @@ const programs = [
     link: './dev-matrix'
   },
   {
-    title: 'Code Challenge',
+    title: 'Dev Challenge',
     description: 'In August 2025, we launched the Dev Lantern Challenge to push learning beyond theory and into execution. Designed as a hands-on, problem-solving initiative, the Dev Challenge encourages collaboration, strengthens technical competence, and identifies emerging talent with the community.',
     overlay: 'rgba(20, 40, 110, 1)',
     textColor: 'text-[#CAD1E4]', 

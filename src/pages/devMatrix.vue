@@ -43,7 +43,7 @@
             :key="track.id"
             @click="activeTrack = track.id"
             :class="[
-              'px-6 py-3 rounded-lg sm:text-sm text-xs font-semibold transition-all duration-200 sm:min-w-[280px] text-center',
+              'px-6 py-3 rounded-lg cursor-pointer sm:text-sm text-xs font-semibold transition-all duration-200 sm:min-w-[280px] text-center',
               activeTrack === track.id
                 ? 'bg-[#1a2f7a] text-white shadow-md'
                 : 'bg-[#E9ECF4] text-[#1a2f7a] hover:bg-[#dde4f5]'
